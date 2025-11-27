@@ -76,18 +76,11 @@ export default function ResumePage() {
                   </p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-2 md:justify-start">
-                  <Badge variant="secondary" className="text-xs">
-                    Fullstack Developer
-                  </Badge>
-                  <Badge variant="secondary" className="text-xs">
-                    TypeScript
-                  </Badge>
-                  <Badge variant="secondary" className="text-xs">
-                    React/Next.js
-                  </Badge>
-                  <Badge variant="secondary" className="text-xs">
-                    Node.js
-                  </Badge>
+                  {personalInfo.highlightSkills?.map((skill) => (
+                    <Badge variant="secondary" className="text-xs">
+                      {skill}
+                    </Badge>
+                  ))}
                 </div>
                 <p className="text-sm leading-relaxed text-muted-foreground max-w-2xl">{bio}</p>
                 <div className="flex flex-wrap justify-center gap-4 md:justify-start pt-2">
