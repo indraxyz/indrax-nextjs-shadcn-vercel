@@ -1,22 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  /* Custom breakpoints */
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 900px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1536px;
+  --breakpoint-2xl: 1536px;
+
+  /* shadcn/ui theme colors */
+  --color-background: oklch(100% 0 0);
+  --color-foreground: oklch(9.8% 0.006 285.88);
+  --color-card: oklch(100% 0 0);
+  --color-card-foreground: oklch(9.8% 0.006 285.88);
+  --color-popover: oklch(100% 0 0);
+  --color-popover-foreground: oklch(9.8% 0.006 285.88);
+  --color-primary: oklch(9.8% 0.006 285.88);
+  --color-primary-foreground: oklch(98% 0.002 285.88);
+  --color-secondary: oklch(96.1% 0.001 285.88);
+  --color-secondary-foreground: oklch(9.8% 0.006 285.88);
+  --color-muted: oklch(96.1% 0.001 285.88);
+  --color-muted-foreground: oklch(45.1% 0.013 285.88);
+  --color-accent: oklch(96.1% 0.001 285.88);
+  --color-accent-foreground: oklch(9.8% 0.006 285.88);
+  --color-destructive: oklch(62.8% 0.257 29.24);
+  --color-destructive-foreground: oklch(98% 0.002 285.88);
+  --color-border: oklch(89.8% 0.001 285.88);
+  --color-input: oklch(89.8% 0.001 285.88);
+  --color-ring: oklch(9.8% 0.006 285.88);
+  --radius: 0.5rem;
+}
 
 @layer base {
-  /* button {
-    @apply text-gray-950;
-  } */
-}
-
-@layer components {
-  .judul {
-    @apply underline mt-10 mb-10;
+  * {
+    border-color: var(--color-border);
   }
-  .foto-profile {
-    @apply w-40 md:w-full h-auto rounded-xl self-center;
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
   }
-}
-
-/* our new class  */
-@layer utilities {
 }
