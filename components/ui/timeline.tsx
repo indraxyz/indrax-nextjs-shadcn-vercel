@@ -30,7 +30,7 @@ const TimelineItem = React.forwardRef<HTMLDivElement, TimelineItemProps>(
             <div className="absolute top-8 left-1/2 h-full w-0.5 -translate-x-1/2 bg-border" />
           )} */}
         </div>
-        <div className="flex-1 pb-8">{children}</div>
+        <div className="flex-1 ">{children}</div>
       </div>
     )
   }

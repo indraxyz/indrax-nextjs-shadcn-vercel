@@ -178,14 +178,14 @@ export const techStacks: TechStack[] = [
   { category: "Cloud & Hosting", items: "Vercel, AWS, Cloudflare" },
   { category: "Backend Frameworks", items: "Hono.js, Laravel" },
   { category: "Development Type", items: "Fullstack, Serverless" },
-  { category: "Languages", items: "TypeScript" },
-  { category: "Frontend Frameworks", items: "Next.js, Remix, Preact" },
+  { category: "Languages", items: "TypeScript, Go" },
+  { category: "Frontend Frameworks", items: "Next.js, Remix, Preact, React Native" },
   { category: "APIs & Real-time", items: "GraphQL, WebSocket, Crypto" },
-  { category: "ORM & Database Tools", items: "Prisma, Drizzle" },
+  { category: "ORM & Database Tools", items: "Prisma, Drizzle, Redis" },
   { category: "Databases", items: "MySQL, PostgreSQL, MongoDB" },
   { category: "UI Libraries & Styling", items: "Tailwind, Shadcn, Tamagui" },
   { category: "Build Tools", items: "Turbopack, Vite" },
-  { category: "Libraries", items: "Tanstack, Rxjs, Mapbox, Swiper, Onborda" },
+  { category: "Libraries", items: "Tanstack, Rxjs, Mapbox, Swiper, Onborda, docker" },
   { category: "State Management", items: "Redux, Zustand, Context" },
   { category: "Animation", items: "GSAP, Framer Motion" },
   { category: "Data Visualization", items: "Echarts, Recharts" },
@@ -195,6 +195,7 @@ export const techStacks: TechStack[] = [
   { category: "Payment Integration", items: "Stripe, Midtrans" },
   { category: "Design Tools", items: "Figma, Eraser, Miro" },
   { category: "Testing", items: "Jest, Vitest" },
+  { category: "Operating Systems", items: "Windows, Linux, MacOS" },
 ]
 
 export const education: Education[] = [
