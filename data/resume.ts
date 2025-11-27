@@ -216,7 +216,7 @@ export const education: Education[] = [
 
 export const certifications: Certification[] = [
   {
-    title: "Problem Solving (Basic)",
+    title: "Problem Solving",
     issuer: "HackerRank",
     period: "Dec 2024",
     link: "https://www.hackerrank.com/certificates/a42dc6068da4",

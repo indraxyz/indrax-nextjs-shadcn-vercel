@@ -19,6 +19,7 @@ import {
   ExternalLink,
   Github,
   Download,
+  UserSearch,
 } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -182,7 +183,7 @@ export default function ResumePage() {
                         </div>
                       </CardHeader>
                       <CardContent className="pt-0">
-                        <p className="text-xs text-muted-foreground leading-relaxed">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                           {item.description}
                         </p>
                       </CardContent>
@@ -198,7 +199,7 @@ export default function ResumePage() {
             {/* Identity Section */}
             <Card>
               <CardHeader>
-                <SectionHeader icon={<User className="h-5 w-5" />} title="Personal Info" />
+                <SectionHeader icon={<User className="h-5 w-5" />} title="Personal" />
               </CardHeader>
               <CardContent className="space-y-1">
                 <InfoItem
@@ -214,21 +215,9 @@ export default function ResumePage() {
                 />
                 <Separator />
                 <InfoItem
-                  icon={<User className="h-4 w-4" />}
-                  label="Age"
-                  value={`${personalInfo.age} years`}
-                />
-                <Separator />
-                <InfoItem
-                  icon={<User className="h-4 w-4" />}
-                  label="Gender"
-                  value={personalInfo.gender}
-                />
-                <Separator />
-                <InfoItem
-                  icon={<User className="h-4 w-4" />}
-                  label="Status"
-                  value={personalInfo.status}
+                  icon={<UserSearch className="h-4 w-4" />}
+                  label="Age/ Gender/ Status"
+                  value={`${personalInfo.age} years / ${personalInfo.gender} / ${personalInfo.status}`}
                 />
                 <Separator />
                 <InfoItem
@@ -248,8 +237,8 @@ export default function ResumePage() {
                 {education.map((edu, index) => (
                   <div key={index}>
                     <p className="font-semibold text-sm mb-1">{edu.degree}</p>
-                    <p className="text-xs text-muted-foreground mb-1">{edu.field}</p>
-                    <p className="text-xs text-muted-foreground">{edu.institution}</p>
+                    <p className="text-sm text-muted-foreground">{edu.institution}</p>
+                    <p className="text-sm text-muted-foreground mb-1">{edu.field}</p>
                     <p className="text-xs text-primary font-medium mt-1">
                       {edu.period}
                       {edu.gpa && ` • GPA: ${edu.gpa}`}
@@ -270,7 +259,7 @@ export default function ResumePage() {
                   {techSkills.map((skill, index) => (
                     <li key={index} className="flex items-start gap-2">
                       <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
-                      <span className="text-xs leading-relaxed">{skill}</span>
+                      <span className="text-sm leading-relaxed">{skill}</span>
                     </li>
                   ))}
                 </ul>
@@ -287,7 +276,7 @@ export default function ResumePage() {
                   {techStacks.map((stack, index) => (
                     <div key={index}>
                       <p className="font-semibold text-xs mb-1">{stack.category}</p>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{stack.items}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{stack.items}</p>
                       {index < techStacks.length - 1 && <Separator className="mt-3" />}
                     </div>
                   ))}
@@ -304,7 +293,7 @@ export default function ResumePage() {
                 <div className="space-y-3">
                   {certifications.map((cert, index) => (
                     <div key={index}>
-                      <p className="font-semibold text-xs mb-1">{cert.title}</p>
+                      <p className="font-semibold text-sm mb-1">{cert.title}</p>
                       <p className="text-xs text-muted-foreground mb-1">{cert.issuer}</p>
                       {cert.link && (
                         <Link
@@ -333,7 +322,7 @@ export default function ResumePage() {
                 <div className="space-y-3">
                   {achievements.map((achievement, index) => (
                     <div key={index}>
-                      <p className="font-semibold text-xs">{achievement.title}</p>
+                      <p className="font-semibold text-sm">{achievement.title}</p>
                       <p className="text-xs text-muted-foreground">{achievement.description}</p>
                       {index < achievements.length - 1 && <Separator className="mt-3" />}
                     </div>
@@ -352,7 +341,7 @@ export default function ResumePage() {
                   <div className="space-y-3">
                     {organizations.map((org, index) => (
                       <div key={index}>
-                        <p className="font-semibold text-xs">{org.title}</p>
+                        <p className="font-semibold text-sm">{org.title}</p>
                         {org.description && (
                           <p className="text-xs text-muted-foreground">{org.description}</p>
                         )}
