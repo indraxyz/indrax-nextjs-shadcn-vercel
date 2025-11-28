@@ -211,12 +211,11 @@ export default function ResumePage() {
                 <SectionHeader icon={<Code className="h-5 w-5" />} title="Tech Stack" />
               </CardHeader>
               <CardContent>
-                <div className="space-y-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {techStacks.map((stack, index) => (
                     <div key={index}>
                       <p className="font-semibold text-xs mb-1">{stack.category}</p>
                       <p className="text-sm text-muted-foreground leading-relaxed">{stack.items}</p>
-                      {index < techStacks.length - 1 && <Separator className="mt-3" />}
                     </div>
                   ))}
                 </div>
