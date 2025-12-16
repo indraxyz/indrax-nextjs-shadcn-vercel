@@ -24,7 +24,7 @@ export const personalInfo: PersonalInfo = {
   website: "https://indrax.my.id",
   highlightSkills: [
     "Vercel/ AWS/ Cloudflare",
-    "Honojs/ Laravel",
+    "Express/ Honojs/ Laravel",
     "Fullstack, Serverless",
     "TypeScript",
     "Next.js/ Remix/ Preact",
@@ -41,7 +41,7 @@ export const personalInfo: PersonalInfo = {
     "Vibe coding, Cursor, LLM",
     "Notion, Github",
     "Stripe/ Midtrans",
-    "Figma, Eraser, Miro",
+    "Figma, Eraser",
     "Jest, Vitest",
   ],
 }
@@ -57,7 +57,7 @@ export const experiences: ExperienceItem[] = [
     role: "Senior Software Engineer (Fullstack, Frontend)",
     description: [
       "Core team member of Kisum App, development from inception, to production with a focus on architecture, scalable systems with best UI/UX. Key modules developed include Artists, AI Chat, News, Events & Financials, Festivals, Venues, Vendors, and Market.",
-      "Technologies: TypeScript, NextJS, Tailwind, Shadcn, GraphQL, WebSocket, REST API, Redux/ Zustand/ Context, Tanstack, Mapbox, Swiper, Onborda, Echarts, Recharts, JWT, Stripe, Figma, Jest, docker, github, Turbopack, MongoDB, Aws & Cloudflare",
+      "Technologies: TypeScript, NextJs, UiUx (Tailwind & Shadcn, Redux/ Zustand/ Context, Tanstack, Mapbox, Swiper, Onborda, Echarts/ Recharts, Figma, Axios, Async, Hooks, React-hook-form, Zod ), GraphQL, WebSocket, REST API, JWT, Stripe, Figma, Jest, docker, github, Turbopack, MongoDB & PostgreSQL, Redis, Aws & Cloudflare, microservices, serverless (Lambda, Cloudflare Workers), express, Web Socket, Crypto, Stripe Payment Gateway, Github, Collaboration (Github Project, Teams, Zoom, Microsoft Cloud), ",
     ],
   },
   {
@@ -221,7 +221,7 @@ export const techStacks: TechStack[] = [
   },
   { category: "State Management", items: "Redux, Zustand, Context" },
   { category: "Form Validation", items: "React-hook-form, Zod" },
-  { category: "Design Tools", items: "Figma, Eraser, Miro, PS, AI" },
+  { category: "Design Tools", items: "Figma, Eraser, PS, AI" },
   { category: "Animation", items: "GSAP, Framer Motion, Remotion" },
   { category: "Data Visualization", items: "Echarts, Recharts, Nivo, TanStack Table" },
   { category: "Diagramming", items: "React Flow" },
