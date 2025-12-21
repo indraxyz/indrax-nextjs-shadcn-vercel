@@ -78,13 +78,13 @@ export default function ResumePage() {
                   </p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-2 md:justify-start">
-                  {personalInfo.highlightSkills?.map((skill) => (
-                    <Badge variant="secondary" className="text-xs">
+                  {personalInfo.highlightSkills?.map((skill, i) => (
+                    <Badge variant="secondary" className="text-xs" key={i}>
                       {skill}
                     </Badge>
                   ))}
                 </div>
-                <p className="text-sm leading-relaxed text-muted-foreground max-w-2xl">{bio}</p>
+                <p className="text-sm leading-relaxed text-muted-foreground ">{bio}</p>
                 <div className="flex flex-wrap justify-center gap-4 md:justify-start pt-2">
                   <Link
                     href={SOCIAL_LINKS.email}

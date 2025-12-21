@@ -11,7 +11,7 @@ import type {
 
 export const personalInfo: PersonalInfo = {
   name: "Indra Cahya E S.Kom",
-  title: "Senior Software Engineer",
+  title: "Senior Software Engineer (Frontend, Fullstack)",
   email: "indracahyae@gmail.com",
   phone: "+62 813 3563 0404",
   location: "Surabaya, Indonesia",
@@ -54,9 +54,9 @@ export const experiences: ExperienceItem[] = [
   {
     period: "Apr 2025 - Present",
     company: "Primuse, Bali",
-    role: "Senior Software Engineer (Fullstack, Frontend)",
+    role: "Senior Software Engineer (Frontend, Fullstack)",
     description: [
-      "Core team member of Kisum App, development from inception, to production with a focus on architecture, scalable systems with best UI/UX. Key modules developed include Artists, AI Chat, News, Events & Financials, Festivals, Venues, Vendors, and Market.",
+      "Core team of Kisum App, development from inception, to production with a focus on architecture, scalable systems with best UI/UX and multi-tenant. Key modules developed include Artists, AI Chat, News, Events & Financials, Festivals, Venues, Vendors, and Market.",
       "Technologies: TypeScript, NextJs, UiUx (Tailwind & Shadcn, Redux/ Zustand/ Context, Tanstack, Mapbox, Swiper, Onborda, Echarts/ Recharts, Figma, Axios, Async, Hooks, React-hook-form, Zod ), GraphQL, WebSocket, REST API, JWT, Stripe, Figma, Jest, docker, github, Turbopack, MongoDB & PostgreSQL, Redis, Aws & Cloudflare, microservices, serverless (Lambda, Cloudflare Workers), express, Web Socket, Crypto, Stripe Payment Gateway, Github, Collaboration (Github Project, Teams, Zoom, Microsoft Cloud), ",
     ],
   },
@@ -261,7 +261,7 @@ export const education: Education[] = [
       "CTComp (Tech Community)",
     ],
     description:
-      "Graduated with honors with a GPA of 3.66. Led multiple tech community activities, participated in student organizations, and completed a thesis project developing a crime reporting application (Crimenesia) in collaboration with local police and the community.",
+      "Graduated with honors with a GPA of 3.66. Multiple tech community activities, participated in student organizations, and completed a thesis project developing a crime reporting application (Crimenesia) in collaboration with local police and the community.",
   },
   {
     degree: "Senior High School",
