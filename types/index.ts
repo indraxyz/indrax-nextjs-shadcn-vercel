@@ -15,6 +15,7 @@ export interface PortfolioItem {
 export interface TechStack {
   category: string
   items: string
+  group?: string
 }
 
 export interface SkillSets {

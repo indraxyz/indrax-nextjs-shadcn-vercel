@@ -60,15 +60,15 @@ export default function ResumePage() {
         </div>
       </div>
 
-      <div className="container mx-auto max-w-6xl px-4 py-8 md:py-12 print:py-4">
+      <div className="container mx-auto max-w-6xl px-4 py-8 xl:py-12 print:py-4">
         {/* Hero Section */}
         <Card className="mb-8 overflow-hidden border-2 shadow-lg print:shadow-none">
-          <CardContent className="p-6 md:p-8">
-            <div className="flex flex-col gap-8 md:flex-row md:items-start">
-              <div className="flex justify-center md:justify-start">
+          <CardContent className="p-6 xl:p-8">
+            <div className="flex flex-col gap-8 xl:flex-row xl:items-start">
+              <div className="flex justify-center xl:justify-start">
                 <ProfileAvatar src="/foto-profile.jpg" alt={personalInfo.name} fallback="ICE" />
               </div>
-              <div className="flex-1 space-y-4 text-center md:text-left">
+              <div className="flex-1 space-y-4 text-center xl:text-left">
                 <div>
                   <h1 className="text-3xl font-bold md:text-4xl bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                     {personalInfo.name}
@@ -77,7 +77,7 @@ export default function ResumePage() {
                     {personalInfo.title}
                   </p>
                 </div>
-                <div className="flex flex-wrap justify-center gap-2 md:justify-start">
+                <div className="flex flex-wrap justify-center gap-2 xl:justify-start">
                   {personalInfo.highlightSkills?.map((skill, i) => (
                     <Badge variant="secondary" className="text-xs" key={i}>
                       {skill}
@@ -85,7 +85,7 @@ export default function ResumePage() {
                   ))}
                 </div>
                 <p className="text-sm leading-relaxed text-muted-foreground ">{bio}</p>
-                <div className="flex flex-wrap justify-center gap-4 md:justify-start pt-2">
+                <div className="flex flex-wrap justify-center gap-4 xl:justify-start pt-2">
                   <Link
                     href={SOCIAL_LINKS.email}
                     className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -128,9 +128,9 @@ export default function ResumePage() {
           </CardContent>
         </Card>
 
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-8 grid-cols-1 lg:grid-cols-3">
           {/* Main Content */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-8 col-span-1">
             {/* Experiences Section */}
             <Card>
               <CardHeader>
@@ -172,14 +172,18 @@ export default function ResumePage() {
             {/* Portfolio Section */}
             <Card>
               <CardHeader>
-                <SectionHeader icon={<Code className="h-5 w-5" />} title="Portfolio & Projects" />
+                <SectionHeader
+                  icon={<Code className="h-5 w-5" />}
+                  title="Portfolio & Projects"
+                  link={{ href: SOCIAL_LINKS.github, textLink: "View My Github" }}
+                />
               </CardHeader>
-              <CardContent>
-                <div className="grid gap-4 md:grid-cols-2">
+              <CardContent className="overflow-x-auto">
+                <div className="flex flex-nowrap gap-4 ">
                   {portfolioItems.map((item, index) => (
                     <Card
                       key={index}
-                      className="hover:shadow-md transition-all duration-200 border-l-4 border-l-primary"
+                      className="hover:shadow-md transition-all duration-200 border-l-4 border-l-primary max-w-96 shrink-0"
                     >
                       <CardHeader className="pb-3">
                         <div className="flex items-start justify-between">
@@ -210,13 +214,36 @@ export default function ResumePage() {
               <CardHeader>
                 <SectionHeader icon={<Code className="h-5 w-5" />} title="Tech Stack" />
               </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {techStacks.map((stack, index) => (
-                    <div key={index}>
-                      <p className="font-semibold text-xs mb-1">{stack.category}</p>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{stack.items}</p>
-                    </div>
+              <CardContent className="overflow-x-auto">
+                <div className="flex flex-nowrap gap-4 ">
+                  {Object.entries(
+                    techStacks.reduce((acc, stack) => {
+                      const group = stack.group || "Other"
+                      if (!acc[group]) {
+                        acc[group] = []
+                      }
+                      acc[group].push(stack)
+                      return acc
+                    }, {} as Record<string, typeof techStacks>)
+                  ).map(([groupName, stacks]) => (
+                    <Card
+                      key={groupName}
+                      className="hover:shadow-md transition-all duration-200 border-l-4 border-l-primary w-96 shrink-0"
+                    >
+                      <CardHeader className="pb-3">
+                        <CardTitle className="text-base mb-2">{groupName}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="pt-0 space-y-4">
+                        {stacks.map((stack, index) => (
+                          <div key={index} className="space-y-1">
+                            <p className="font-semibold text-xs text-primary">{stack.category}</p>
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                              {stack.items}
+                            </p>
+                          </div>
+                        ))}
+                      </CardContent>
+                    </Card>
                   ))}
                 </div>
               </CardContent>
