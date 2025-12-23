@@ -178,34 +178,34 @@ export default function ResumePage() {
                   link={{ href: SOCIAL_LINKS.github, textLink: "View My Github" }}
                 />
               </CardHeader>
-              <CardContent className="overflow-x-auto">
-                <div className="flex flex-nowrap gap-4 ">
-                  {portfolioItems.map((item, index) => (
-                    <Card
-                      key={index}
-                      className="hover:shadow-md transition-all duration-200 border-l-4 border-l-primary max-w-96 shrink-0"
-                    >
-                      <CardHeader className="pb-3">
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1">
-                            <CardTitle className="text-base mb-1">{item.title}</CardTitle>
-                            <CardDescription className="text-xs">{item.year}</CardDescription>
-                          </div>
-                          {item.link && (
-                            <Link href={item.link} target="_blank" rel="noopener noreferrer">
-                              <ExternalLink className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors" />
-                            </Link>
-                          )}
+              <CardContent className="flex overflow-x-auto xl:grid xl:grid-cols-3 gap-4">
+                {/* <div className="flex xl:flex-nowrap gap-4 "> */}
+                {portfolioItems.map((item, index) => (
+                  <Card
+                    key={index}
+                    className="hover:shadow-md transition-all duration-200 border-l-4 border-l-primary max-w-96 shrink-0"
+                  >
+                    <CardHeader className="pb-3">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <CardTitle className="text-base mb-1">{item.title}</CardTitle>
+                          <CardDescription className="text-xs">{item.year}</CardDescription>
                         </div>
-                      </CardHeader>
-                      <CardContent className="pt-0">
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          {item.description}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+                        {item.link && (
+                          <Link href={item.link} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors" />
+                          </Link>
+                        )}
+                      </div>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {item.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                ))}
+                {/* </div> */}
               </CardContent>
             </Card>
 
@@ -214,38 +214,38 @@ export default function ResumePage() {
               <CardHeader>
                 <SectionHeader icon={<Code className="h-5 w-5" />} title="Tech Stack" />
               </CardHeader>
-              <CardContent className="overflow-x-auto">
-                <div className="flex flex-nowrap gap-4 ">
-                  {Object.entries(
-                    techStacks.reduce((acc, stack) => {
-                      const group = stack.group || "Other"
-                      if (!acc[group]) {
-                        acc[group] = []
-                      }
-                      acc[group].push(stack)
-                      return acc
-                    }, {} as Record<string, typeof techStacks>)
-                  ).map(([groupName, stacks]) => (
-                    <Card
-                      key={groupName}
-                      className="hover:shadow-md transition-all duration-200 border-l-4 border-l-primary w-96 shrink-0"
-                    >
-                      <CardHeader className="pb-3">
-                        <CardTitle className="text-base mb-2">{groupName}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="pt-0 space-y-4">
-                        {stacks.map((stack, index) => (
-                          <div key={index} className="space-y-1">
-                            <p className="font-semibold text-xs text-primary">{stack.category}</p>
-                            <p className="text-sm text-muted-foreground leading-relaxed">
-                              {stack.items}
-                            </p>
-                          </div>
-                        ))}
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+              <CardContent className="flex overflow-x-auto xl:grid xl:grid-cols-3 gap-4">
+                {/* <div className="flex flex-nowrap gap-4 "> */}
+                {Object.entries(
+                  techStacks.reduce((acc, stack) => {
+                    const group = stack.group || "Other"
+                    if (!acc[group]) {
+                      acc[group] = []
+                    }
+                    acc[group].push(stack)
+                    return acc
+                  }, {} as Record<string, typeof techStacks>)
+                ).map(([groupName, stacks]) => (
+                  <Card
+                    key={groupName}
+                    className="hover:shadow-md transition-all duration-200 border-l-4 border-l-primary w-96 xl:w-full shrink-0"
+                  >
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-base mb-2">{groupName}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0 space-y-4">
+                      {stacks.map((stack, index) => (
+                        <div key={index} className="space-y-1">
+                          <p className="font-semibold text-xs text-primary">{stack.category}</p>
+                          <p className="text-sm text-muted-foreground leading-relaxed">
+                            {stack.items}
+                          </p>
+                        </div>
+                      ))}
+                    </CardContent>
+                  </Card>
+                ))}
+                {/* </div> */}
               </CardContent>
             </Card>
           </div>
