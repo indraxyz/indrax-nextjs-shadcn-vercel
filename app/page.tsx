@@ -606,7 +606,7 @@ export default function ResumePage() {
         {/* Footer */}
         <div className="text-center py-8 mt-8 border-t">
           <p className="text-sm text-muted-foreground">
-            Made with ❤️ by {personalInfo.name} • Last updated: {getCurrentDateFormatted()}
+            by Indra • Last updated: {getCurrentDateFormatted()}
           </p>
         </div>
       </div>
