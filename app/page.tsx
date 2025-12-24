@@ -21,9 +21,20 @@ import {
   Download,
   UserSearch,
   Globe,
+  Menu,
 } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer"
 import {
   personalInfo,
   bio,
@@ -47,15 +58,153 @@ export default function ResumePage() {
         <div className="container mx-auto max-w-7xl px-4 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-xl font-bold">{RESUME_CONFIG.title}</h1>
-            {/* <Button
-              variant="outline"
-              size="sm"
-              onClick={() => window.print()}
-              className="hidden print:hidden"
-            >
-              <Download className="h-4 w-4 mr-2" />
-              Download PDF
-            </Button> */}
+            <div className="flex items-center gap-2">
+              {/* Mobile Drawer Trigger */}
+              <Drawer>
+                <DrawerTrigger asChild>
+                  <Button variant="outline" size="icon" className="lg:hidden">
+                    <User className="h-5 w-5" />
+                    <span className="sr-only">Open personal information</span>
+                  </Button>
+                </DrawerTrigger>
+                <DrawerContent>
+                  <DrawerHeader>
+                    <DrawerTitle>Personal Information</DrawerTitle>
+                    <DrawerDescription>
+                      View your personal details, education, and organizations
+                    </DrawerDescription>
+                  </DrawerHeader>
+                  <div className="overflow-y-auto px-4 pb-4 space-y-6">
+                    {/* Personal Section */}
+                    <Card>
+                      <CardHeader>
+                        <SectionHeader icon={<User className="h-5 w-5" />} title="Personal" />
+                      </CardHeader>
+                      <CardContent className="space-y-1">
+                        <InfoItem
+                          icon={<User className="h-4 w-4" />}
+                          label="Name"
+                          value={`${personalInfo.name} S.Kom`}
+                        />
+                        <Separator />
+                        <InfoItem
+                          icon={<Calendar className="h-4 w-4" />}
+                          label="Date of Birth"
+                          value={personalInfo.dateOfBirth}
+                        />
+                        <Separator />
+                        <InfoItem
+                          icon={<UserSearch className="h-4 w-4" />}
+                          label="Age/ Gender/ Status"
+                          value={`${personalInfo.age} years / ${personalInfo.gender} / ${personalInfo.status}`}
+                        />
+                        <Separator />
+                        <InfoItem
+                          icon={<MapPin className="h-4 w-4" />}
+                          label="Address"
+                          value={personalInfo.address}
+                        />
+                      </CardContent>
+                    </Card>
+
+                    {/* Education Section */}
+                    <Card>
+                      <CardHeader>
+                        <SectionHeader
+                          icon={<GraduationCap className="h-5 w-5" />}
+                          title="Education"
+                        />
+                      </CardHeader>
+                      <CardContent className="space-y-6">
+                        {education.map((edu, index) => (
+                          <div key={index} className="space-y-3">
+                            <div>
+                              <p className="font-semibold text-sm mb-1">{edu.degree}</p>
+                              <p className="text-sm text-muted-foreground">{edu.institution}</p>
+                              <p className="text-sm text-muted-foreground mb-1">{edu.field}</p>
+                              <p className="text-xs text-primary font-medium mt-1">
+                                {edu.period}
+                                {edu.gpa && ` • GPA: ${edu.gpa}`}
+                              </p>
+                            </div>
+                            {edu.thesis && (
+                              <div>
+                                <p className="text-xs font-semibold text-foreground mb-1">
+                                  Thesis:
+                                </p>
+                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                  {edu.thesis}
+                                </p>
+                              </div>
+                            )}
+                            {edu.organization && edu.organization.length > 0 && (
+                              <div>
+                                <p className="text-xs font-semibold text-foreground mb-1">
+                                  Organizations:
+                                </p>
+                                <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-2">
+                                  {edu.organization.map((org, i) => (
+                                    <li key={i}>{org}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                            {edu.description && (
+                              <div>
+                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                  {edu.description}
+                                </p>
+                              </div>
+                            )}
+                            {index < education.length - 1 && <Separator className="mt-4" />}
+                          </div>
+                        ))}
+                      </CardContent>
+                    </Card>
+
+                    {/* Organizations */}
+                    {organizations.length > 0 && (
+                      <Card>
+                        <CardHeader>
+                          <SectionHeader
+                            icon={<Users className="h-5 w-5" />}
+                            title="Organizations"
+                          />
+                        </CardHeader>
+                        <CardContent>
+                          <div className="space-y-3">
+                            {organizations.map((org, index) => (
+                              <div key={index}>
+                                <p className="font-semibold text-sm">{org.title}</p>
+                                {org.description && (
+                                  <p className="text-xs text-muted-foreground">{org.description}</p>
+                                )}
+                                <p className="text-xs text-muted-foreground">{org.period}</p>
+                                {index < organizations.length - 1 && <Separator className="mt-3" />}
+                              </div>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    )}
+                  </div>
+                  <DrawerFooter>
+                    <DrawerClose asChild>
+                      <Button variant="outline">Close</Button>
+                    </DrawerClose>
+                  </DrawerFooter>
+                </DrawerContent>
+              </Drawer>
+              {/* <Button
+                variant="outline"
+                size="sm"
+                onClick={() => window.print()}
+                className="hidden print:hidden"
+              >
+                <Download className="h-4 w-4 mr-2" />
+                Download PDF
+              </Button> */}
+            </div>
           </div>
         </div>
       </div>
@@ -140,32 +289,65 @@ export default function ResumePage() {
                 />
               </CardHeader>
               <CardContent>
-                <Timeline>
-                  {experiences.map((exp, index) => (
-                    <TimelineItem key={index} isLast={index === experiences.length - 1}>
-                      <TimelineContent>
-                        <div className="space-y-2">
-                          <div className="flex flex-wrap items-center gap-2">
-                            <p className="text-xs font-semibold text-primary uppercase tracking-wide">
-                              {exp.period}
-                            </p>
-                            <Badge variant="outline" className="text-xs">
-                              {exp.role}
-                            </Badge>
+                {/* Desktop Timeline View */}
+                <div className="hidden xl:block">
+                  <Timeline>
+                    {experiences.map((exp, index) => (
+                      <TimelineItem key={index} isLast={index === experiences.length - 1}>
+                        <TimelineContent>
+                          <div className="space-y-2">
+                            <div className="flex flex-wrap items-center gap-2">
+                              <p className="text-xs font-semibold text-primary uppercase tracking-wide">
+                                {exp.period}
+                              </p>
+                              <Badge variant="outline" className="text-xs">
+                                {exp.role}
+                              </Badge>
+                            </div>
+                            <h3 className="text-lg font-bold">{exp.company}</h3>
+                            <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground ml-2">
+                              {exp.description.map((desc, i) => (
+                                <li key={i} className="leading-relaxed">
+                                  {desc}
+                                </li>
+                              ))}
+                            </ul>
                           </div>
-                          <h3 className="text-lg font-bold">{exp.company}</h3>
-                          <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground ml-2">
-                            {exp.description.map((desc, i) => (
-                              <li key={i} className="leading-relaxed">
-                                {desc}
-                              </li>
-                            ))}
-                          </ul>
+                        </TimelineContent>
+                      </TimelineItem>
+                    ))}
+                  </Timeline>
+                </div>
+                {/* Mobile Horizontal Scroll View */}
+                <div className="flex overflow-x-auto xl:hidden gap-4 pb-4">
+                  {experiences.map((exp, index) => (
+                    <Card
+                      key={index}
+                      className="hover:shadow-md transition-all duration-200 border-l-4 border-l-primary max-w-96 shrink-0"
+                    >
+                      <CardHeader className="pb-3">
+                        <div className="flex flex-wrap items-center gap-2 mb-2">
+                          <p className="text-xs font-semibold text-primary uppercase tracking-wide">
+                            {exp.period}
+                          </p>
+                          <Badge variant="outline" className="text-xs">
+                            {exp.role}
+                          </Badge>
                         </div>
-                      </TimelineContent>
-                    </TimelineItem>
+                        <CardTitle className="text-base">{exp.company}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="pt-0">
+                        <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground ml-2">
+                          {exp.description.map((desc, i) => (
+                            <li key={i} className="leading-relaxed">
+                              {desc}
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
                   ))}
-                </Timeline>
+                </div>
               </CardContent>
             </Card>
 
@@ -251,7 +433,7 @@ export default function ResumePage() {
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-8">
+          <div className="space-y-8 hidden lg:block">
             {/* Identity Section */}
             <Card>
               <CardHeader>

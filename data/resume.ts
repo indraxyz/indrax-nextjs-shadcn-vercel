@@ -442,7 +442,7 @@ export const achievements: Achievement[] = [
 export const organizations: Organization[] = [
   {
     title: "Vice Chairman of DANS Sidoarjo",
-    period: "2010 - 2011",
+    period: "2010 - 2012",
     description: "Duta Anti Narkoba Sidoarjo (DANS) BNNK Sidoarjo",
   },
   {
