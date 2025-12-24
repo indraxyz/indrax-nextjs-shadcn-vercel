@@ -71,7 +71,7 @@ export default function ResumePage() {
                   <DrawerHeader>
                     <DrawerTitle>Personal Information</DrawerTitle>
                     <DrawerDescription>
-                      View your personal details, education, and organizations
+                      See my personal details, education, and organizations
                     </DrawerDescription>
                   </DrawerHeader>
                   <div className="overflow-y-auto px-4 pb-4 space-y-6">
