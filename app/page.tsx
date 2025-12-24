@@ -71,7 +71,7 @@ export default function ResumePage() {
                   <DrawerHeader>
                     <DrawerTitle>Personal Information</DrawerTitle>
                     <DrawerDescription>
-                      See my personal details, education, and organizations
+                      Summary of my personal details, education, and organizations
                     </DrawerDescription>
                   </DrawerHeader>
                   <div className="overflow-y-auto px-4 pb-4 space-y-6">
@@ -104,6 +104,71 @@ export default function ResumePage() {
                           label="Address"
                           value={personalInfo.address}
                         />
+
+                        <Separator />
+                        <InfoItem
+                          icon={<Mail className="h-4 w-4" />}
+                          label="Email"
+                          value={
+                            <Link
+                              href={SOCIAL_LINKS.email}
+                              className="text-sm  hover:text-primary transition-colors"
+                            >
+                              {personalInfo.email}
+                            </Link>
+                          }
+                        />
+                        <Separator />
+                        <InfoItem
+                          icon={<Phone className="h-4 w-4" />}
+                          label="Phone"
+                          value={
+                            <Link
+                              href={SOCIAL_LINKS.phone}
+                              className="text-sm  hover:text-primary transition-colors"
+                            >
+                              {personalInfo.phone}
+                            </Link>
+                          }
+                        />
+                        {personalInfo.github && (
+                          <>
+                            <Separator />
+                            <InfoItem
+                              icon={<Github className="h-4 w-4" />}
+                              label="GitHub"
+                              value={
+                                <Link
+                                  href={personalInfo.github}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-sm  hover:text-primary transition-colors"
+                                >
+                                  github.com/indraxyz
+                                </Link>
+                              }
+                            />
+                          </>
+                        )}
+                        {personalInfo.website && (
+                          <>
+                            <Separator />
+                            <InfoItem
+                              icon={<Globe className="h-4 w-4" />}
+                              label="Website Link"
+                              value={
+                                <Link
+                                  href={personalInfo.website}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-sm  hover:text-primary transition-colors"
+                                >
+                                  {personalInfo.website}
+                                </Link>
+                              }
+                            />
+                          </>
+                        )}
                       </CardContent>
                     </Card>
 
@@ -219,10 +284,10 @@ export default function ResumePage() {
               </div>
               <div className="flex-1 space-y-4 text-center xl:text-left">
                 <div>
-                  <h1 className="text-3xl font-bold md:text-4xl bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                  <h1 className="text-xl font-bold bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                     {personalInfo.name}
                   </h1>
-                  <p className="mt-2 text-xl font-medium text-muted-foreground">
+                  <p className="mt-2 text-sm font-medium text-muted-foreground">
                     {personalInfo.title}
                   </p>
                 </div>
@@ -234,44 +299,6 @@ export default function ResumePage() {
                   ))}
                 </div>
                 <p className="text-sm leading-relaxed text-muted-foreground ">{bio}</p>
-                <div className="flex flex-wrap justify-center gap-4 xl:justify-start pt-2">
-                  <Link
-                    href={SOCIAL_LINKS.email}
-                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Mail className="h-4 w-4" />
-                    <span>{personalInfo.email}</span>
-                  </Link>
-                  <Link
-                    href={SOCIAL_LINKS.phone}
-                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Phone className="h-4 w-4" />
-                    <span>{personalInfo.phone}</span>
-                  </Link>
-                  {personalInfo.github && (
-                    <Link
-                      href={personalInfo.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <Github className="h-4 w-4" />
-                      <span>github.com/indraxyz</span>
-                    </Link>
-                  )}
-                  {personalInfo.website && (
-                    <Link
-                      href={personalInfo.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <Globe className="h-4 w-4" />
-                      <span>{personalInfo.website}</span>
-                    </Link>
-                  )}
-                </div>
               </div>
             </div>
           </CardContent>
@@ -606,7 +633,7 @@ export default function ResumePage() {
         {/* Footer */}
         <div className="text-center py-8 mt-8 border-t">
           <p className="text-sm text-muted-foreground">
-            by Indra • Last updated: {getCurrentDateFormatted()}
+            by Indra • updated at {getCurrentDateFormatted()}
           </p>
         </div>
       </div>
