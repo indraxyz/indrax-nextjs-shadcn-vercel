@@ -44,7 +44,7 @@ export default function ResumePage() {
     <div className="min-h-screen bg-linear-to-br from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       {/* Header with Print Button */}
       <div className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
-        <div className="container mx-auto max-w-6xl px-4 py-4">
+        <div className="container mx-auto max-w-7xl px-4 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-xl font-bold">{RESUME_CONFIG.title}</h1>
             {/* <Button
@@ -60,7 +60,7 @@ export default function ResumePage() {
         </div>
       </div>
 
-      <div className="container mx-auto max-w-6xl px-4 py-8 xl:py-12 print:py-4">
+      <div className="container mx-auto max-w-7xl px-4 py-8 xl:py-12 print:py-4">
         {/* Hero Section */}
         <Card className="mb-8 overflow-hidden border-2 shadow-lg print:shadow-none">
           <CardContent className="p-6 xl:p-8">
