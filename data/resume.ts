@@ -32,13 +32,13 @@ export const personalInfo: PersonalInfo = {
     "Prisma/ Drizzle",
     "MySQL/ Postgre/ MongoDB",
     "Tailwind/ Shadcn/ Tamagui",
-    "Turbopack/ Vite",
+    "Turbopack/ Vite/ Turborepo",
     "Tanstack, Rxjs, Mapbox, Swiper, Onborda",
     "Redux/ Zustand/ Context",
     "GSAP/ Framer Motion",
     "Echarts/ Recharts",
     "JWT/ Better-auth",
-    "Vibe coding, Cursor, LLM",
+    "Vibe coding, Cursor, LLM, Gemini, n8n",
     "Notion, Github",
     "Stripe/ Midtrans",
     "Figma, Eraser",
@@ -194,7 +194,8 @@ export const techStacks: TechStack[] = [
   {
     group: "Core Development",
     category: "Software Architecture",
-    items: "Microservice, Monolith, Service Oriented, Event-driven, Serverless, Microkernel",
+    items:
+      "Microservice, Monolith, Service Oriented, Event-driven, Serverless, Microkernel, Monorepo",
   },
   {
     group: "Infrastructure & DevOps",
