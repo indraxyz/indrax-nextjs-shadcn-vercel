@@ -308,7 +308,7 @@ export default function ResumePage() {
               </CardHeader>
               <CardContent>
                 {/* Desktop Timeline View */}
-                <div className="hidden xl:block max-h-[500px] overflow-y-auto">
+                <div className="hidden xl:block max-h-[1250px] overflow-y-auto">
                   <Timeline>
                     {experiences.map((exp, index) => (
                       <TimelineItem key={index} isLast={index === experiences.length - 1}>
@@ -398,7 +398,7 @@ export default function ResumePage() {
                         )}
                       </div>
                     </CardHeader>
-                    <CardContent className="pt-0 max-h-72 overflow-y-auto">
+                    <CardContent className="pt-0 max-h-[500px] overflow-y-auto">
                       <p className="text-sm text-muted-foreground leading-relaxed">
                         {item.description}
                       </p>
@@ -433,7 +433,7 @@ export default function ResumePage() {
                     <CardHeader className="pb-3">
                       <CardTitle className="text-base mb-2">{groupName}</CardTitle>
                     </CardHeader>
-                    <CardContent className="pt-0 space-y-4 max-h-72 overflow-y-auto">
+                    <CardContent className="pt-0 space-y-4 max-h-[750px] overflow-y-auto">
                       {stacks.map((stack, index) => (
                         <div key={index} className="space-y-1">
                           <p className="font-semibold text-xs text-primary">{stack.category}</p>
