@@ -260,15 +260,6 @@ export default function ResumePage() {
                   </DrawerFooter>
                 </DrawerContent>
               </Drawer>
-              {/* <Button
-                variant="outline"
-                size="sm"
-                onClick={() => window.print()}
-                className="hidden print:hidden"
-              >
-                <Download className="h-4 w-4 mr-2" />
-                Download PDF
-              </Button> */}
             </div>
           </div>
         </div>
@@ -293,7 +284,7 @@ export default function ResumePage() {
                 </div>
                 <div className="flex flex-wrap justify-center gap-2 xl:justify-start">
                   {personalInfo.highlightSkills?.map((skill, i) => (
-                    <Badge variant="secondary" className="text-xs" key={i}>
+                    <Badge variant="secondary" className="text-[10px]" key={i}>
                       {skill}
                     </Badge>
                   ))}
@@ -317,7 +308,7 @@ export default function ResumePage() {
               </CardHeader>
               <CardContent>
                 {/* Desktop Timeline View */}
-                <div className="hidden xl:block">
+                <div className="hidden xl:block max-h-[500px] overflow-y-auto">
                   <Timeline>
                     {experiences.map((exp, index) => (
                       <TimelineItem key={index} isLast={index === experiences.length - 1}>
@@ -363,7 +354,7 @@ export default function ResumePage() {
                         </div>
                         <CardTitle className="text-base">{exp.company}</CardTitle>
                       </CardHeader>
-                      <CardContent className="pt-0">
+                      <CardContent className="pt-0 max-h-72 overflow-y-auto">
                         <ul className="list-disc list-inside space-y-1.5 text-sm text-muted-foreground ml-2">
                           {exp.description.map((desc, i) => (
                             <li key={i} className="leading-relaxed">
@@ -407,7 +398,7 @@ export default function ResumePage() {
                         )}
                       </div>
                     </CardHeader>
-                    <CardContent className="pt-0">
+                    <CardContent className="pt-0 max-h-72 overflow-y-auto">
                       <p className="text-sm text-muted-foreground leading-relaxed">
                         {item.description}
                       </p>
@@ -442,7 +433,7 @@ export default function ResumePage() {
                     <CardHeader className="pb-3">
                       <CardTitle className="text-base mb-2">{groupName}</CardTitle>
                     </CardHeader>
-                    <CardContent className="pt-0 space-y-4">
+                    <CardContent className="pt-0 space-y-4 max-h-72 overflow-y-auto">
                       {stacks.map((stack, index) => (
                         <div key={index} className="space-y-1">
                           <p className="font-semibold text-xs text-primary">{stack.category}</p>
