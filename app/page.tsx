@@ -227,6 +227,75 @@ export default function ResumePage() {
                       </CardContent>
                     </Card>
 
+                    {/* Core Skills */}
+                    <Card>
+                      <CardHeader>
+                        <SectionHeader icon={<Award className="h-5 w-5" />} title="Core Skills" />
+                      </CardHeader>
+                      <CardContent>
+                        <ul className="space-y-2">
+                          {techSkills.map((skill, index) => (
+                            <li key={index} className="flex items-start gap-2">
+                              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                              <span className="text-sm leading-relaxed">{skill}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
+
+                    {/* Certifications */}
+                    <Card>
+                      <CardHeader>
+                        <SectionHeader
+                          icon={<Award className="h-5 w-5" />}
+                          title="Certifications"
+                        />
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-3">
+                          {certifications.map((cert, index) => (
+                            <div key={index}>
+                              <p className="font-semibold text-sm mb-1">{cert.title}</p>
+                              <p className="text-xs text-muted-foreground mb-1">{cert.issuer}</p>
+                              {cert.link && (
+                                <Link
+                                  href={cert.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-xs text-primary hover:underline flex items-center gap-1"
+                                >
+                                  View Certificate <ExternalLink className="h-3 w-3" />
+                                </Link>
+                              )}
+                              <p className="text-xs text-muted-foreground mt-1">{cert.period}</p>
+                              {index < certifications.length - 1 && <Separator className="mt-3" />}
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+
+                    {/* Achievements */}
+                    <Card>
+                      <CardHeader>
+                        <SectionHeader icon={<Award className="h-5 w-5" />} title="Achievements" />
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-3">
+                          {achievements.map((achievement, index) => (
+                            <div key={index}>
+                              <p className="font-semibold text-sm">{achievement.title}</p>
+                              <p className="text-xs text-muted-foreground">
+                                {achievement.description}
+                              </p>
+                              {index < achievements.length - 1 && <Separator className="mt-3" />}
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+
                     {/* Organizations */}
                     {organizations.length > 0 && (
                       <Card>
@@ -318,6 +387,7 @@ export default function ResumePage() {
                               <p className="text-xs font-semibold text-primary uppercase tracking-wide">
                                 {exp.period}
                               </p>
+                              <span className="text-xs text-muted-foreground">({exp.timing})</span>
                               <Badge variant="outline" className="text-xs">
                                 {exp.role}
                               </Badge>
@@ -348,10 +418,11 @@ export default function ResumePage() {
                           <p className="text-xs font-semibold text-primary uppercase tracking-wide">
                             {exp.period}
                           </p>
-                          <Badge variant="outline" className="text-xs">
-                            {exp.role}
-                          </Badge>
+                          <span className="text-xs text-muted-foreground">({exp.timing})</span>
                         </div>
+                        <Badge variant="outline" className="text-xs w-fit">
+                          {exp.role}
+                        </Badge>
                         <CardTitle className="text-base">{exp.company}</CardTitle>
                       </CardHeader>
                       <CardContent className="pt-0 max-h-72 overflow-y-auto">
@@ -389,7 +460,7 @@ export default function ResumePage() {
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
                           <CardTitle className="text-base mb-1">{item.title}</CardTitle>
-                          <CardDescription className="text-xs">{item.year}</CardDescription>
+                          {/* <CardDescription className="text-xs">{item.year}</CardDescription> */}
                         </div>
                         {item.link && (
                           <Link href={item.link} target="_blank" rel="noopener noreferrer">

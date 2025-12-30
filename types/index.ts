@@ -1,6 +1,7 @@
 export interface ExperienceItem {
   period: string
   company: string
+  timing: string
   role: string
   description: string[]
 }

@@ -54,6 +54,7 @@ export const experiences: ExperienceItem[] = [
   {
     period: "Apr 2025 - Present",
     company: "Primuse, Bali",
+    timing: "Full Time, Hybrid",
     role: "Senior Software Engineer (Frontend, Fullstack)",
     description: [
       "Core team of Kisum App, development from inception, to production with a focus on architecture, scalable systems with best UI/UX and multi-tenant. Key modules developed include Artists, AI (Chat, Prediction), News, Events & Financials, Festivals, Venues, Vendors, and Market.",
@@ -63,7 +64,8 @@ export const experiences: ExperienceItem[] = [
   {
     period: "Jun 2019 - Mar 2025",
     company: "PT Kode Kreatif Digital, Sidoarjo",
-    role: "Fullstack Software Engineer",
+    timing: "Full Time, Hybrid",
+    role: "Senior Fullstack Software Engineer",
     description: [
       "Develop web apps and hybrid mobile apps (profile, online store, education, health, finance, custom)",
       "Technologies: TypeScript, Material UI, Tailwind, Ant Design, ReactJS, Redux, NextJS, ExpressJS, Laravel, React Native, MySQL, PostgreSQL, ORM, GitHub, GraphQL, REST API, Web Socket, Golang, Python, Docker, Kubernetes",
@@ -72,6 +74,7 @@ export const experiences: ExperienceItem[] = [
   {
     period: "May 2018 - May 2019",
     company: "Yayasan iik Bhakti Wiyata (partner with PT Sigma Intan Mahakarya), Surabaya",
+    timing: "Full Time, Hybrid",
     role: "Fullstack Software Engineer",
     description: [
       "Built Ners App, school app, canteen app from scratch",
@@ -81,16 +84,17 @@ export const experiences: ExperienceItem[] = [
   {
     period: "Jun 2016 - Apr 2018",
     company: "CV. Indscript Computer, Sidoarjo",
+    timing: "Full Time, Onsite",
     role: "Fullstack Software Engineer",
     description: [
-      "Developed web/android applications based on client requirements",
-      "Company profiles, online stores, parking systems, waiting systems, POS, custom solutions",
+      "Developed web/android applications based on client requirements such as Company profiles, online stores, parking systems, waiting systems, POS, custom solutions",
       "Technologies: Laravel, ExpressJS, ReactJS, Material UI, React Native, MySQL, ORM, GitHub, REST API",
     ],
   },
   {
     period: "Mar 2016 - May 2016",
     company: "CV. Mitra Mia Group, Surabaya",
+    timing: "Freelance, Hybrid",
     role: "Fullstack Web Developer, Team Lead (7 members)",
     description: [
       "Built online shop web for property listings",
@@ -100,6 +104,7 @@ export const experiences: ExperienceItem[] = [
   {
     period: "Aug 2012 - Feb 2013",
     company: "LPK Mitra Computer, Sidoarjo",
+    timing: "Full Time, Onsite",
     role: "Technician, Professional Computer Trainer",
     description: ["Microsoft Office, Graphic Design, Technician, Networking"],
   },
@@ -107,9 +112,9 @@ export const experiences: ExperienceItem[] = [
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: "Students",
+    title: "Manage Student,  Product, Task",
     description:
-      "fullstack application built with Next.js 16, MongoDB, and GraphQL using Apollo Server and Client. feature-based architecture for optimal maintainability and scalability.",
+      "data table management with proper uiux & performance with Next.js, React Router/ Remix,  MongoDB, GraphQL, React 19, TypeScript, Vite/ Turbopack, Tailwind CSS v4 (fullstack application) enhanced for optimal maintainability and scalability.",
     year: "2025",
   },
   {
@@ -119,7 +124,13 @@ export const portfolioItems: PortfolioItem[] = [
     year: "2025",
   },
   {
-    title: "Pokemon",
+    title: "TodoApp",
+    description:
+      "todoApp (kanban board) q with drag drop functionality use Typescript, NextJs, NextUi, tailwind, motion.",
+    year: "2025",
+  },
+  {
+    title: "Pokedex",
     description:
       "search about pokemons that built with typescript, nextJs, material ui, tailwind, pokemon api v2.",
     year: "2025",
@@ -223,17 +234,17 @@ export const techStacks: TechStack[] = [
     items: "Prisma, Drizzle, Serverless Storage, Redis, Crypto, ",
   },
   {
-    group: "Backend & API",
-    category: "API",
+    group: "API",
+    category: "HTTP Request Communication",
     items: "RESTful, GraphQL",
   },
   {
-    group: "Backend & API",
+    group: "API",
     category: "Realtime Communication",
     items: "RPC JSON-RPC, WebSocket",
   },
   {
-    group: "Backend & API",
+    group: "API",
     category: "Authentication",
     items: "JWT, Auth.js, Better-auth",
   },
@@ -360,6 +371,11 @@ export const techStacks: TechStack[] = [
     items: "Planner Microsoft, GitHub Project, Notion",
   },
   {
+    group: "Core Development",
+    category: "Methodologies",
+    items: "Agile, Scrum, Sprint",
+  },
+  {
     group: "Business Tools",
     category: "Collaboration",
     items: "Notion, GitHub Project, Teams, Google Meet, Zoom, Microsoft Cloud, Google Workspace",
@@ -367,7 +383,7 @@ export const techStacks: TechStack[] = [
   {
     group: "Design & Media",
     category: "Design Tools",
-    items: "Figma, Eraser, PS, AI",
+    items: "Figma, Adobe XD, Eraser, Photoshop, Coreldraw, Ai, Lightroom, AI",
   },
   {
     group: "System",
