@@ -8,27 +8,27 @@
   --breakpoint-xl: 1536px;
   --breakpoint-2xl: 1536px;
 
-  /* shadcn/ui theme colors */
+  /* Timeless Minimal Theme */
   --color-background: oklch(100% 0 0);
-  --color-foreground: oklch(9.8% 0.006 285.88);
+  --color-foreground: oklch(15% 0 0);
   --color-card: oklch(100% 0 0);
-  --color-card-foreground: oklch(9.8% 0.006 285.88);
+  --color-card-foreground: oklch(15% 0 0);
   --color-popover: oklch(100% 0 0);
-  --color-popover-foreground: oklch(9.8% 0.006 285.88);
-  --color-primary: oklch(9.8% 0.006 285.88);
-  --color-primary-foreground: oklch(98% 0.002 285.88);
-  --color-secondary: oklch(96.1% 0.001 285.88);
-  --color-secondary-foreground: oklch(9.8% 0.006 285.88);
-  --color-muted: oklch(96.1% 0.001 285.88);
-  --color-muted-foreground: oklch(45.1% 0.013 285.88);
-  --color-accent: oklch(96.1% 0.001 285.88);
-  --color-accent-foreground: oklch(9.8% 0.006 285.88);
+  --color-popover-foreground: oklch(15% 0 0);
+  --color-primary: oklch(15% 0 0);
+  --color-primary-foreground: oklch(100% 0 0);
+  --color-secondary: oklch(96% 0 0);
+  --color-secondary-foreground: oklch(15% 0 0);
+  --color-muted: oklch(96% 0 0);
+  --color-muted-foreground: oklch(55% 0 0);
+  --color-accent: oklch(96% 0 0);
+  --color-accent-foreground: oklch(15% 0 0);
   --color-destructive: oklch(62.8% 0.257 29.24);
-  --color-destructive-foreground: oklch(98% 0.002 285.88);
-  --color-border: oklch(89.8% 0.001 285.88);
-  --color-input: oklch(89.8% 0.001 285.88);
-  --color-ring: oklch(9.8% 0.006 285.88);
-  --radius: 0.5rem;
+  --color-destructive-foreground: oklch(100% 0 0);
+  --color-border: oklch(90% 0 0);
+  --color-input: oklch(90% 0 0);
+  --color-ring: oklch(15% 0 0);
+  --radius: 0rem;
 }
 
 @layer base {
@@ -40,3 +40,22 @@
     color: var(--color-foreground);
   }
 }
+
+@keyframes gradient-walk {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-matte-gradient-animated {
+  background-image: linear-gradient(270deg, #e57373, #b39ddb, #fafafa, #e57373) !important;
+  background-size: 300% 300% !important;
+  animation: gradient-walk 6s ease-in-out infinite !important;
+}
+

@@ -10,7 +10,7 @@ import type {
 } from "@/types"
 
 export const personalInfo: PersonalInfo = {
-  name: "Indra Cahya E S.Kom",
+  name: "Indra Cahya Edytya",
   title: "Senior Software Engineer (Frontend, Fullstack)",
   email: "indracahyae@gmail.com",
   phone: "+62 813 3563 0404",
@@ -24,7 +24,7 @@ export const personalInfo: PersonalInfo = {
   website: "https://indrax.my.id",
   highlightSkills: [
     "Vercel/ AWS/ Cloudflare",
-    "Express/ Honojs/ Laravel",
+    "Express/ Fastify/ Honojs/ Laravel",
     "Fullstack, Serverless",
     "TypeScript",
     "Next.js/ Remix/ Preact",
@@ -40,7 +40,7 @@ export const personalInfo: PersonalInfo = {
     "JWT/ Better-auth",
     "Vibe coding, LLM, Gemini, n8n",
     "Notion, Github",
-    "Stripe/ Midtrans",
+    "Stripe/ Midtrans/ Xendit",
     "Figma, Eraser",
     "Jest, Vitest",
   ],

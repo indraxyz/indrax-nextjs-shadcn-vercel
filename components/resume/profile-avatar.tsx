@@ -29,9 +29,8 @@ export function ProfileAvatar({
       {/* Outer glow ring */}
       <div
         className={cn(
-          "absolute inset-0 rounded-full",
-          "bg-linear-to-br from-primary/20 via-primary/10 to-transparent",
-          "blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-300",
+          "absolute inset-0 rounded-full bg-matte-gradient-animated",
+          "blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-300",
           "scale-110"
         )}
       />
@@ -39,13 +38,10 @@ export function ProfileAvatar({
       {/* Gradient border ring */}
       <div
         className={cn(
-          "absolute inset-0 rounded-full p-[3px]",
-          "bg-linear-to-br from-primary via-primary/80 to-primary/60",
+          "absolute -inset-[4px] rounded-full bg-matte-gradient-animated",
           "opacity-80 group-hover:opacity-100 transition-opacity duration-300"
         )}
-      >
-        <div className="w-full h-full rounded-full bg-background" />
-      </div>
+      />
 
       {/* Avatar container */}
       <div className="relative z-10">
@@ -53,10 +49,10 @@ export function ProfileAvatar({
           className={cn(
             "relative h-24 w-24 sm:h-28 sm:w-28 md:h-36 md:w-36 lg:h-40 lg:w-40",
             "border-2 border-background",
-            "shadow-2xl shadow-primary/20",
-            "ring-2 ring-primary/10",
+            "shadow-2xl shadow-black/10",
+            "ring-2 ring-black/5",
             "transition-all duration-300",
-            "group-hover:scale-105 group-hover:shadow-primary/30",
+            "group-hover:scale-105",
             "print:scale-100 print:shadow-none"
           )}
         >
