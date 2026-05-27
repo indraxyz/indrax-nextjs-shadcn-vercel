@@ -11,7 +11,7 @@ import type {
 
 export const personalInfo: PersonalInfo = {
   name: "Indra Cahya Edytya",
-  title: "Senior Software Engineer (Frontend, Fullstack)",
+  title: "Senior Software Engineer",
   email: "indracahyae@gmail.com",
   phone: "+62 813 3563 0404",
   location: "Surabaya, Indonesia",
@@ -24,7 +24,7 @@ export const personalInfo: PersonalInfo = {
   website: "https://indrax.my.id",
   highlightSkills: [
     "Vercel/ AWS/ Cloudflare",
-    "Express/ Fastify/ Honojs/ Laravel",
+    "Express/ Fastify/ Honojs/ Laravel/ Gin",
     "Fullstack, Serverless",
     "TypeScript",
     "Next.js/ Remix/ Preact",
@@ -38,8 +38,8 @@ export const personalInfo: PersonalInfo = {
     "GSAP/ Framer Motion",
     "Echarts/ Recharts",
     "JWT/ Better-auth",
-    "Vibe coding, LLM, Gemini, n8n",
-    "Notion, Github",
+    "Agentic AI, Vibe coding, LLM, Gemini, n8n",
+    "Notion, GitHub, Jira",
     "Stripe/ Midtrans/ Xendit",
     "Figma, Eraser",
     "Jest, Vitest",
@@ -55,7 +55,7 @@ export const experiences: ExperienceItem[] = [
     period: "Apr 2025 - Present",
     company: "Primuse, Bali",
     timing: "Full Time, Hybrid",
-    role: "Senior Software Engineer (Frontend, Fullstack)",
+    role: "Senior Software Engineer",
     description: [
       "Core team of Kisum App, development from inception, to production with a focus on architecture, scalable systems with best UI/UX and multi-tenant. Key modules developed include Artists, AI (Chat, Prediction), News, Events & Financials, Festivals, Venues, Vendors, and Market.",
       "Technologies: TypeScript, NextJs, UiUx (Tailwind & Shadcn, Redux/ Zustand/ Context, Tanstack, Mapbox, Swiper, Onborda, Echarts/ Recharts, Figma, Axios, Async, Hooks, React-hook-form, Zod ), GraphQL, WebSocket, REST API, JWT, Stripe, Figma, Jest, docker, github, Turbopack, MongoDB & PostgreSQL, Redis, Aws & Cloudflare, microservices, serverless (Lambda, Cloudflare Workers), express, Web Socket, Crypto, Stripe Payment Gateway, Github, Collaboration (Github Project, Teams, Zoom, Microsoft Cloud), Ai (gemini, n8n)",
@@ -194,181 +194,9 @@ export const techStacks: TechStack[] = [
   },
   {
     group: "Core Development",
-    category: "Backend Frameworks",
-    items: "Hono.js, GoFiber, Laravel, Express",
-  },
-  {
-    group: "Core Development",
-    category: "Frontend Frameworks",
-    items: "Next.js, Remix React-Router, Preact",
-  },
-  {
-    group: "Core Development",
     category: "Software Architecture",
     items:
       "Microservice, Monolith, Service Oriented, Event-driven, Serverless, Microkernel, Monorepo",
-  },
-  {
-    group: "Infrastructure & DevOps",
-    category: "Deployment",
-    items: "Vercel, AWS, Cloudflare",
-  },
-  {
-    group: "Infrastructure & DevOps",
-    category: "Containerization",
-    items: "Docker",
-  },
-  {
-    group: "Infrastructure & DevOps",
-    category: "Serverless Functions",
-    items: "AWS Lambda, Cloudflare Workers, Vercel Function",
-  },
-  {
-    group: "Database & Storage",
-    category: "Databases",
-    items: "PostgreSQL, MySQL, MongoDB, Supabase, Firebase, Neon",
-  },
-  {
-    group: "Database & Storage",
-    category: "ORM & Database, other tools",
-    items: "Prisma, Drizzle, Serverless Storage, Redis, Crypto, ",
-  },
-  {
-    group: "API",
-    category: "HTTP Request Communication",
-    items: "RESTful, GraphQL",
-  },
-  {
-    group: "API",
-    category: "Realtime Communication",
-    items: "RPC JSON-RPC, WebSocket",
-  },
-  {
-    group: "API",
-    category: "Authentication",
-    items: "JWT, Auth.js, Better-auth",
-  },
-  {
-    group: "Frontend Tools",
-    category: "UI Components",
-    items: "Shadcn, Radix, HeroUI, FluentUI, MantineUI, Chakra, Gluestack, Tamagui, Lit",
-  },
-  {
-    group: "Frontend Tools",
-    category: "Styling",
-    items: "Emotion, Tailwind, UnoCSS, Kuma UI, Styled JSX",
-  },
-  {
-    group: "Frontend Tools",
-    category: "Build Tools",
-    items: "Webpack, Turbopack, Vite, Turborepo",
-  },
-  {
-    group: "Frontend Tools",
-    category: "State Management",
-    items: "Redux, Zustand, Context",
-  },
-  {
-    group: "Frontend Tools",
-    category: "Form Validation",
-    items: "React-hook-form, Zod",
-  },
-  {
-    group: "Frontend Tools",
-    category: "Network & Data Fetching",
-    items: "TanStack Query, Axios, Fetch",
-  },
-  {
-    group: "Frontend Tools",
-    category: "Frontend Utilities",
-    items:
-      "Lodash, RxJS, Tanstack Table, Hooks, Async, Loadable-components, Algolia, Alpine, Mapbox, Urql",
-  },
-  {
-    group: "Frontend UI/UX",
-    category: "Animation",
-    items: "GSAP, Framer Motion, Remotion",
-  },
-  {
-    group: "Frontend UI/UX",
-    category: "Data Visualization",
-    items: "Echarts, Recharts, Nivo, TanStack Table",
-  },
-  {
-    group: "Frontend UI/UX",
-    category: "Text Editors",
-    items: "Tiptap, Plate, Quill",
-  },
-  {
-    group: "Frontend UI/UX",
-    category: "Sliders & Carousels",
-    items: "Swiper, Embla-carousel",
-  },
-  {
-    group: "Frontend UI/UX",
-    category: "Onboarding",
-    items: "Onborda",
-  },
-  {
-    group: "Frontend UI/UX",
-    category: "Diagramming",
-    items: "React Flow",
-  },
-  {
-    group: "Mobile Development",
-    category: "Mobile - React Native",
-    items:
-      "Tamagui, Expo, Flash List, Firebase, React Navigation, Mapbox, Notifications, Hardware Module",
-  },
-  {
-    group: "Development Tools",
-    category: "Testing",
-    items: "Jest, Vitest, Testify, Unit, Integration, JSON-server (data mocking)",
-  },
-  {
-    group: "Development Tools",
-    category: "Documentation",
-    items: "Swagger, Storybook",
-  },
-  {
-    group: "Development Tools",
-    category: "Version Control",
-    items: "Git, GitHub",
-  },
-  {
-    group: "Development Tools",
-    category: "IDE",
-    items: "VSCode, Cursor",
-  },
-  {
-    group: "AI & Automation",
-    category: "AI",
-    items: "Prompting, Model, Agents, Context",
-  },
-  {
-    group: "AI & Automation",
-    category: "Code Agents",
-    items: "Cursor, Copilot",
-  },
-  {
-    group: "AI & Automation",
-    category: "LLM",
-    items: "GPT, Claude, Gemini, Llama",
-  },
-  {
-    group: "AI & Automation",
-    category: "Vibe Coding",
-    items: "Rules, MCP, Agent, Models, PRD, Context",
-  },
-  {
-    group: "Business Tools",
-    category: "Payment Gateways",
-    items: "Midtrans, Stripe, Polar",
-  },
-  {
-    group: "Business Tools",
-    category: "Project Management",
-    items: "Planner Microsoft, GitHub Project, Notion",
   },
   {
     group: "Core Development",
@@ -376,17 +204,144 @@ export const techStacks: TechStack[] = [
     items: "Agile, Scrum, Sprint",
   },
   {
-    group: "Business Tools",
-    category: "Collaboration",
-    items: "Notion, GitHub Project, Teams, Google Meet, Zoom, Microsoft Cloud, Google Workspace",
+    group: "Infrastructure & DevOps",
+    category: "Cloud Platforms",
+    items: "Vercel, AWS, Cloudflare",
   },
   {
-    group: "Design & Media",
-    category: "Design Tools",
-    items: "Figma, Adobe XD, Eraser, Photoshop, Coreldraw, Ai, Lightroom, AI",
+    group: "Infrastructure & DevOps",
+    category: "Containers & Serverless",
+    items: "Docker, AWS Lambda, Cloudflare Workers, Vercel Function",
   },
   {
-    group: "System",
+    group: "Backend & Database",
+    category: "Backend Frameworks",
+    items: "Hono.js, GoFiber, Laravel, Express, Gin",
+  },
+  {
+    group: "Backend & Database",
+    category: "Databases",
+    items: "PostgreSQL, MySQL, MongoDB, Supabase, Firebase, Neon",
+  },
+  {
+    group: "Backend & Database",
+    category: "ORM & Storage",
+    items: "Prisma, Drizzle, Redis, Serverless Storage",
+  },
+  {
+    group: "Backend & Database",
+    category: "Security & Auth",
+    items: "JWT, Auth.js, Better-auth, Crypto",
+  },
+  {
+    group: "API & Networking",
+    category: "Protocols",
+    items: "RESTful, GraphQL, RPC, JSON-RPC",
+  },
+  {
+    group: "API & Networking",
+    category: "Realtime",
+    items: "WebSocket",
+  },
+  {
+    group: "Frontend Development",
+    category: "Frameworks",
+    items: "Next.js, Remix React-Router, Preact",
+  },
+  {
+    group: "Frontend Development",
+    category: "UI Components",
+    items: "Shadcn, Radix, HeroUI, FluentUI, MantineUI, Chakra, Gluestack, Tamagui, Lit",
+  },
+  {
+    group: "Frontend Development",
+    category: "Styling",
+    items: "Emotion, Tailwind, UnoCSS, Kuma UI, Styled JSX",
+  },
+  {
+    group: "Frontend Development",
+    category: "State Management",
+    items: "Redux, Zustand, Context",
+  },
+  {
+    group: "Frontend Development",
+    category: "Data Fetching",
+    items: "TanStack Query, Axios, Fetch",
+  },
+  {
+    group: "Frontend Development",
+    category: "Build Tools",
+    items: "Webpack, Turbopack, Vite, Turborepo",
+  },
+  {
+    group: "Frontend Development",
+    category: "Animation",
+    items: "GSAP, Framer Motion, Remotion",
+  },
+  {
+    group: "Frontend Development",
+    category: "Data Visualization",
+    items: "Echarts, Recharts, Nivo, TanStack Table",
+  },
+  {
+    group: "Frontend Development",
+    category: "Forms & Utilities",
+    items:
+      "React-hook-form, Zod, Lodash, RxJS, Hooks, Async, Loadable-components, Algolia, Alpine, Mapbox, Urql",
+  },
+  {
+    group: "Frontend Development",
+    category: "Specialized Components",
+    items: "Tiptap, Plate, Quill, Swiper, Embla-carousel, Onborda, React Flow",
+  },
+  {
+    group: "Mobile Development",
+    category: "React Native",
+    items:
+      "Tamagui, Expo, Flash List, Firebase, React Navigation, Mapbox, Notifications, Hardware Module",
+  },
+  {
+    group: "AI & Automation",
+    category: "LLMs & AI",
+    items: "GPT, Claude, Gemini, Llama, Prompting, Model, Context",
+  },
+  {
+    group: "AI & Automation",
+    category: "Agentic Workflows",
+    items: "Agentic AI, Cursor, Copilot, Vibe Coding, Rules, MCP, Agent, Models, PRD",
+  },
+  {
+    group: "Quality Assurance",
+    category: "Testing",
+    items: "Jest, Vitest, Testify, Unit, Integration, JSON-server (data mocking)",
+  },
+  {
+    group: "Collaboration",
+    category: "Development Tools",
+    items: "Git, GitHub, VSCode, Swagger, Storybook",
+  },
+  {
+    group: "Collaboration",
+    category: "Project Management",
+    items: "Jira, Planner Microsoft, GitHub Project, Notion",
+  },
+  {
+    group: "Collaboration",
+    category: "Communication",
+    items: "Teams, Google Meet, Zoom, Microsoft Cloud, Google Workspace",
+  },
+  {
+    group: "Collaboration",
+    category: "Design & Media",
+    items: "Figma, Adobe XD, Eraser, Photoshop, Coreldraw, Illustrator, Lightroom",
+  },
+  {
+    group: "Integrations",
+    category: "Payment Gateways",
+    items: "Midtrans, Stripe, Polar",
+  },
+  {
+    group: "Integrations",
     category: "Operating Systems",
     items: "Windows, Linux, MacOS",
   },
