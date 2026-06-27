@@ -33,7 +33,7 @@ export default function ResumePage() {
                 <DrawerTrigger asChild>
                   <Button variant="outline" className="rounded-none border-2 border-foreground font-bold uppercase tracking-widest">
                     <User className="h-5 w-5" />
-                    <span>Personal Info</span>
+                    {/* <span>Personal Info</span> */}
                   </Button>
                 </DrawerTrigger>
                 <DrawerContent className="rounded-none border-l-2 border-foreground w-full sm:max-w-xl">
