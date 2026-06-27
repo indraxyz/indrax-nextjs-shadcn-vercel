@@ -11,43 +11,33 @@ import type {
 
 export const personalInfo: PersonalInfo = {
   name: "Indra Cahya Edytya",
-  title: "Senior Software Engineer",
+  title: "Software Engineer",
   email: "indracahyae@gmail.com",
   phone: "+62 813 3563 0404",
   location: "Surabaya, Indonesia",
+  birthDate: "1994-03-22",
   dateOfBirth: "Surabaya, 22 March 1994",
-  age: 30,
+  age: 32,
   gender: "Male",
   status: "Married",
-  address: "Kebo Iwa, Bali, Indonesia",
+  address: "Bali, Indonesia",
   github: "https://github.com/indraxyz",
   website: "https://indrax.my.id",
   highlightSkills: [
-    "Vercel/ AWS/ Cloudflare",
-    "Express/ Fastify/ Honojs/ Laravel/ Gin",
-    "Fullstack, Serverless",
-    "TypeScript",
-    "Next.js/ Remix/ Preact",
-    "GraphQL, WebSocket, Crypto",
-    "Prisma/ Drizzle",
-    "MySQL/ Postgre/ MongoDB",
-    "Tailwind/ Shadcn/ Tamagui",
-    "Turbopack/ Vite/ Turborepo",
-    "Tanstack, Rxjs, Mapbox, Swiper, Onborda",
-    "Redux/ Zustand/ Context",
-    "GSAP/ Framer Motion",
-    "Echarts/ Recharts",
-    "JWT/ Better-auth",
-    "Agentic AI, Vibe coding, LLM, Gemini, n8n",
-    "Notion, GitHub, Jira",
-    "Stripe/ Midtrans/ Xendit",
-    "Figma, Eraser",
-    "Jest, Vitest",
+    "Deployment & CI/CD",
+    "System & Software Architecture",
+    "Fullstack Development",
+    "SQL & NoSQL Databases",
+    "Authentication & Authorization",
+    "Automation & Agentic AI",
+    "Thirdparty Integration",
+    "Testing & Debugging",
+    "Design System & Animation",
   ],
 }
 
-export const bio = `A seasoned Software Engineer with extensive expertise in building scalable applications. 
-I specialize in modern technologies, delivering high-quality solutions that solve complex business challenges. 
+export const bio = `A 9+ years Software Engineer with extensive expertise in building scalable & maintainable applications. 
+Specialize in modern technologies, delivering high-quality solutions that solve complex business challenges. 
 With a proven track record in full-stack development, system architecture, and project management, I bring a comprehensive approach to software engineering that combines technical excellence with strategic thinking.`
 
 export const experiences: ExperienceItem[] = [
@@ -376,6 +366,18 @@ export const education: Education[] = [
 ]
 
 export const certifications: Certification[] = [
+  {
+    title: "Claude Code in Actions",
+    issuer: "Anthropic",
+    period: "May 2026",
+    link: "https://verify.skilljar.com/c/mwaaehb59bxc",
+  },
+  {
+    title: "N8n Integrations & Automations",
+    issuer: "MySkill",
+    period: "Jun 2026",
+    link: "https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fstorage.googleapis.com%2Fmyskill-v2-certificates%2Fcourse-OZLZZJOr9qUzEB0JLbDk%2FrnHNapLUn7RYMFGW0JWkQBBpTTa2-M8zTyO8pby9zYg0uuqhc.pdf&urlhash=u3TY&mt=_icNjnn8-94jHaJN35EiGKqVsFuarQ6zqnhg-kViy-sApL4BbpNgO43l_Iall3ikF2CZlrdlGZMJ-sK2T7GaAm4B3UY&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BpVejrEsuST2iAdxnRoy4mA%3D%3D",
+  },
   {
     title: "Problem Solving",
     issuer: "HackerRank",

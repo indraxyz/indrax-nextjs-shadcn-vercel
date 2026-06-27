@@ -21,8 +21,8 @@ export function HeroSection() {
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-2 xl:justify-start">
-              {personalInfo.highlightSkills?.map((skill, i) => (
-                <Badge variant="outline" className="text-xs uppercase tracking-widest px-3 py-1 border-foreground text-foreground" key={i}>
+              {personalInfo.highlightSkills?.map((skill) => (
+                <Badge variant="outline" className="text-xs uppercase tracking-widest px-3 py-1 border-foreground text-foreground" key={skill}>
                   {skill}
                 </Badge>
               ))}

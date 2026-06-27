@@ -16,9 +16,9 @@ export function PortfolioSection() {
         />
       </CardHeader>
       <CardContent className="flex overflow-x-auto gap-6 pt-6 pb-6">
-        {portfolioItems.map((item, index) => (
+        {portfolioItems.map((item) => (
           <Card
-            key={index}
+            key={`${item.title}-${item.year}`}
             className="rounded-none border-2 border-t-4 border-t-foreground w-[350px] max-w-[85vw] shrink-0 shadow-none flex flex-col"
           >
             <CardHeader className="pb-4 border-b">

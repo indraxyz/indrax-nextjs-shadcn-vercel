@@ -23,21 +23,20 @@ import {
 export default function ResumePage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header with Print Button & Drawer */}
+      {/* Header with Personal Sheet */}
       <div className="sticky top-0 z-50 border-b-2 border-foreground bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
         <div className="container mx-auto max-w-7xl px-4 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-xl font-extrabold uppercase tracking-tight">{RESUME_CONFIG.title}</h1>
             <div className="flex items-center gap-2">
-              {/* Mobile Drawer Trigger */}
-              <Drawer>
+              <Drawer direction="right">
                 <DrawerTrigger asChild>
-                  <Button variant="outline" size="icon" className="lg:hidden rounded-none border-2 border-foreground">
+                  <Button variant="outline" className="rounded-none border-2 border-foreground font-bold uppercase tracking-widest">
                     <User className="h-5 w-5" />
-                    <span className="sr-only">Open personal information</span>
+                    <span>Personal Info</span>
                   </Button>
                 </DrawerTrigger>
-                <DrawerContent className="rounded-none border-t-2 border-foreground">
+                <DrawerContent className="rounded-none border-l-2 border-foreground w-full sm:max-w-xl">
                   <DrawerHeader className="border-b-2 border-foreground bg-muted/30">
                     <DrawerTitle className="font-extrabold uppercase tracking-tight">Personal Information</DrawerTitle>
                     <DrawerDescription className="text-xs uppercase tracking-widest font-semibold">
@@ -62,16 +61,10 @@ export default function ResumePage() {
       <div className="container mx-auto max-w-7xl px-4 py-12 xl:py-16 print:py-4">
         <HeroSection />
 
-        <div className="grid gap-8 grid-cols-1 lg:grid-cols-3">
-          {/* Main Content */}
-          <div className="lg:col-span-2 space-y-8 col-span-1">
-            <ExperienceSection />
-            <PortfolioSection />
-            <TechStackSection />
-          </div>
-
-          {/* Sidebar */}
-          <SidebarInfo className="space-y-8 hidden lg:block" />
+        <div className="space-y-8">
+          <ExperienceSection />
+          <PortfolioSection />
+          <TechStackSection />
         </div>
 
         {/* Footer */}

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-interface TimelineProps extends React.HTMLAttributes<HTMLDivElement> {}
+type TimelineProps = React.HTMLAttributes<HTMLDivElement>
 
 const Timeline = React.forwardRef<HTMLDivElement, TimelineProps>(
   ({ className, children, ...props }, ref) => {
@@ -26,9 +26,9 @@ const TimelineItem = React.forwardRef<HTMLDivElement, TimelineItemProps>(
           <div className="flex h-8 w-8 items-center justify-center rounded-none border-2 border-primary bg-background">
             <div className="h-2 w-2 rounded-none bg-primary" />
           </div>
-          {/* {!isLast && (
+          {!isLast && (
             <div className="absolute top-8 left-1/2 h-full w-0.5 -translate-x-1/2 bg-border" />
-          )} */}
+          )}
         </div>
         <div className="flex-1 ">{children}</div>
       </div>

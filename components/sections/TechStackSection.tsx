@@ -27,9 +27,9 @@ export function TechStackSection() {
             <CardHeader className="pb-4 border-b">
               <CardTitle className="text-base font-extrabold uppercase tracking-tight">{groupName}</CardTitle>
             </CardHeader>
-            <CardContent className="pt-4 space-y-5 max-h-[500px] overflow-y-auto">
-              {stacks.map((stack, index) => (
-                <div key={index} className="space-y-1.5">
+            <CardContent className="pt-4 space-y-5 max-h-72 overflow-y-auto">
+              {stacks.map((stack) => (
+                <div key={`${groupName}-${stack.category}`} className="space-y-1.5">
                   <p className="font-bold text-[10px] text-foreground bg-muted inline-block px-2 py-1 uppercase tracking-widest border border-border">
                     {stack.category}
                   </p>

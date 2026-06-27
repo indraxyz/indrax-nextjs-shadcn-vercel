@@ -39,6 +39,7 @@ export interface PersonalInfo {
   email: string
   phone: string
   location: string
+  birthDate?: string
   dateOfBirth: string
   age: number
   gender: string

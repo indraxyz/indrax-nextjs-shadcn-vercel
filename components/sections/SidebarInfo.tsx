@@ -25,7 +25,24 @@ interface SidebarInfoProps {
   className?: string
 }
 
+function getCurrentAge(birthDate?: string, fallbackAge?: number) {
+  if (!birthDate) return fallbackAge
+
+  const today = new Date()
+  const birth = new Date(birthDate)
+  let age = today.getFullYear() - birth.getFullYear()
+  const monthDiff = today.getMonth() - birth.getMonth()
+
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+    age -= 1
+  }
+
+  return age
+}
+
 export function SidebarInfo({ className }: SidebarInfoProps) {
+  const currentAge = getCurrentAge(personalInfo.birthDate, personalInfo.age)
+
   return (
     <div className={className}>
       {/* Identity Section */}
@@ -49,7 +66,7 @@ export function SidebarInfo({ className }: SidebarInfoProps) {
           <InfoItem
             icon={<UserSearch className="h-4 w-4" />}
             label="Age/ Gender/ Status"
-            value={`${personalInfo.age} years / ${personalInfo.gender} / ${personalInfo.status}`}
+            value={`${currentAge} years / ${personalInfo.gender} / ${personalInfo.status}`}
           />
           <Separator className="my-2" />
           <InfoItem
@@ -67,7 +84,7 @@ export function SidebarInfo({ className }: SidebarInfoProps) {
         </CardHeader>
         <CardContent className="space-y-6 pt-6">
           {education.map((edu, index) => (
-            <div key={index} className="space-y-3">
+            <div key={`${edu.institution}-${edu.period}`} className="space-y-3">
               <div>
                 <p className="font-bold text-sm uppercase tracking-wider mb-1">{edu.degree}</p>
                 <p className="text-sm font-medium">{edu.institution}</p>
@@ -87,8 +104,8 @@ export function SidebarInfo({ className }: SidebarInfoProps) {
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wider mb-1">Organizations:</p>
                   <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-2">
-                    {edu.organization.map((org, i) => (
-                      <li key={i}>{org}</li>
+                    {edu.organization.map((org) => (
+                      <li key={org}>{org}</li>
                     ))}
                   </ul>
                 </div>
@@ -113,8 +130,8 @@ export function SidebarInfo({ className }: SidebarInfoProps) {
         </CardHeader>
         <CardContent className="pt-6">
           <ul className="space-y-3">
-            {techSkills.map((skill, index) => (
-              <li key={index} className="flex items-start gap-3">
+            {techSkills.map((skill) => (
+              <li key={skill} className="flex items-start gap-3">
                 <span className="mt-1.5 h-2 w-2 bg-foreground shrink-0" />
                 <span className="text-sm font-medium leading-relaxed">{skill}</span>
               </li>
@@ -131,7 +148,7 @@ export function SidebarInfo({ className }: SidebarInfoProps) {
         <CardContent className="pt-6">
           <div className="space-y-4">
             {certifications.map((cert, index) => (
-              <div key={index}>
+              <div key={`${cert.title}-${cert.period}`}>
                 <p className="font-bold text-sm leading-tight mb-1">{cert.title}</p>
                 <p className="text-xs font-medium text-muted-foreground mb-1">{cert.issuer}</p>
                 {cert.link && (
@@ -160,7 +177,7 @@ export function SidebarInfo({ className }: SidebarInfoProps) {
         <CardContent className="pt-6">
           <div className="space-y-4">
             {achievements.map((achievement, index) => (
-              <div key={index}>
+              <div key={achievement.title}>
                 <p className="font-bold text-sm leading-tight mb-1">{achievement.title}</p>
                 <p className="text-xs text-muted-foreground leading-relaxed">{achievement.description}</p>
                 {index < achievements.length - 1 && <Separator className="mt-4" />}
@@ -179,7 +196,7 @@ export function SidebarInfo({ className }: SidebarInfoProps) {
           <CardContent className="pt-6">
             <div className="space-y-4">
               {organizations.map((org, index) => (
-                <div key={index}>
+                <div key={`${org.title}-${org.period}`}>
                   <p className="font-bold text-sm leading-tight mb-1">{org.title}</p>
                   {org.description && (
                     <p className="text-xs text-muted-foreground leading-relaxed mb-1">{org.description}</p>

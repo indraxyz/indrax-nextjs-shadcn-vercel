@@ -19,7 +19,7 @@ export function ExperienceSection() {
         <div className="hidden xl:block max-h-[1250px] overflow-y-auto pr-4">
           <Timeline>
             {experiences.map((exp, index) => (
-              <TimelineItem key={index} isLast={index === experiences.length - 1}>
+              <TimelineItem key={`${exp.company}-${exp.period}`} isLast={index === experiences.length - 1}>
                 <TimelineContent>
                   <div className="space-y-3">
                     <div className="flex flex-wrap items-center gap-3">
@@ -33,8 +33,8 @@ export function ExperienceSection() {
                     </div>
                     <h3 className="text-xl font-extrabold uppercase tracking-tight">{exp.company}</h3>
                     <ul className="list-disc list-outside space-y-2 text-sm text-foreground ml-4">
-                      {exp.description.map((desc, i) => (
-                        <li key={i} className="leading-relaxed font-medium">
+                      {exp.description.map((desc) => (
+                        <li key={desc} className="leading-relaxed font-medium">
                           {desc}
                         </li>
                       ))}
@@ -47,9 +47,9 @@ export function ExperienceSection() {
         </div>
         {/* Mobile Horizontal Scroll View */}
         <div className="flex overflow-x-auto xl:hidden gap-6 pb-4">
-          {experiences.map((exp, index) => (
+          {experiences.map((exp) => (
             <Card
-              key={index}
+              key={`${exp.company}-${exp.period}`}
               className="rounded-none border-2 border-t-4 border-t-foreground max-w-96 shrink-0 shadow-none"
             >
               <CardHeader className="pb-4 border-b-2 bg-muted/30">
@@ -66,8 +66,8 @@ export function ExperienceSection() {
               </CardHeader>
               <CardContent className="pt-4 max-h-72 overflow-y-auto">
                 <ul className="list-disc list-outside space-y-2 text-sm text-foreground ml-4">
-                  {exp.description.map((desc, i) => (
-                    <li key={i} className="leading-relaxed font-medium">
+                  {exp.description.map((desc) => (
+                    <li key={desc} className="leading-relaxed font-medium">
                       {desc}
                     </li>
                   ))}
