@@ -1,9 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { SectionHeader } from "@/components/resume"
+import { SOCIAL_LINKS } from "@/features/resume/config"
+import { SectionHeader } from "@/features/resume/components/section-header"
+import { portfolioItems } from "@/features/resume/data/resume"
 import { Code, ExternalLink } from "lucide-react"
 import Link from "next/link"
-import { portfolioItems } from "@/data/resume"
-import { SOCIAL_LINKS } from "@/constants"
 
 export function PortfolioSection() {
   return (
@@ -15,26 +15,31 @@ export function PortfolioSection() {
           link={{ href: SOCIAL_LINKS.github, textLink: "View My Github" }}
         />
       </CardHeader>
-      <CardContent className="flex overflow-x-auto gap-6 pt-6 pb-6">
+      <CardContent className="flex gap-6 overflow-x-auto pb-6 pt-6">
         {portfolioItems.map((item) => (
           <Card
             key={`${item.title}-${item.year}`}
-            className="rounded-none border-2 border-t-4 border-t-foreground w-[350px] max-w-[85vw] shrink-0 shadow-none flex flex-col"
+            className="flex w-[350px] max-w-[85vw] shrink-0 flex-col rounded-none border-2 border-t-4 border-t-foreground shadow-none"
           >
-            <CardHeader className="pb-4 border-b">
+            <CardHeader className="border-b pb-4">
               <div className="flex items-start justify-between gap-4">
                 <CardTitle className="text-base font-extrabold uppercase tracking-tight leading-snug">
                   {item.title}
                 </CardTitle>
                 {item.link && (
-                  <Link href={item.link} target="_blank" rel="noopener noreferrer" className="shrink-0">
-                    <ExternalLink className="h-4 w-4 text-foreground hover:text-muted-foreground transition-colors" />
+                  <Link
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0"
+                  >
+                    <ExternalLink className="h-4 w-4 text-foreground transition-colors hover:text-muted-foreground" />
                   </Link>
                 )}
               </div>
             </CardHeader>
-            <CardContent className="pt-4 flex-1 max-h-[300px] overflow-y-auto">
-              <p className="text-sm font-medium text-foreground leading-relaxed">
+            <CardContent className="max-h-72 min-h-72 flex-1 overflow-y-auto pt-4">
+              <p className="text-sm font-medium leading-relaxed text-foreground">
                 {item.description}
               </p>
             </CardContent>

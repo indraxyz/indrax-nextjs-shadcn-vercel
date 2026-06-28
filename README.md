@@ -18,24 +18,24 @@ A modern, responsive resume/curriculum vitae website built with Next.js 16, Type
 - **Styling**: Tailwind CSS v4
 - **UI Components**: shadcn/ui
 - **Icons**: Lucide React
-- **Package Manager**: pnpm
+- **Package Manager**: npm
 
 ## 📁 Project Structure
 
 ```
 ├── app/                    # Next.js app directory
 │   ├── layout.tsx         # Root layout
-│   ├── page.tsx           # Main resume page
+│   ├── page.tsx           # Server route entry
 │   └── globals.css        # Global styles
-├── components/            # React components
-│   ├── ui/               # shadcn/ui components
-│   └── resume/           # Resume-specific components
-├── data/                  # Data files
-│   └── resume.ts         # Resume data
-├── types/                 # TypeScript type definitions
-│   └── index.ts
-├── constants/             # Application constants
-│   └── index.ts
+├── components/            # Shared UI primitives
+│   └── ui/               # shadcn/ui components
+├── features/
+│   └── resume/
+│       ├── components/   # Resume feature components
+│       ├── data/         # Resume data
+│       ├── utils/        # Resume-specific helpers
+│       ├── config.ts     # Resume config
+│       └── types.ts      # Resume types
 └── lib/                   # Utility functions
     └── utils/
 ```
@@ -44,8 +44,8 @@ A modern, responsive resume/curriculum vitae website built with Next.js 16, Type
 
 ### Prerequisites
 
-- Node.js 18+ 
-- pnpm (recommended) or npm/yarn
+- Node.js 18+
+- npm
 
 ### Installation
 
@@ -57,33 +57,33 @@ cd indrax-nextjs-materialui-vercel
 
 2. Install dependencies
 ```bash
-pnpm install
+npm install
 ```
 
 3. Run the development server
 ```bash
-pnpm dev
+npm run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## 📜 Available Scripts
 
-- `pnpm dev` - Start development server
-- `pnpm build` - Build for production
-- `pnpm start` - Start production server
-- `pnpm lint` - Run ESLint
-- `pnpm lint:fix` - Fix ESLint errors
-- `pnpm type-check` - Run TypeScript type checking
-- `pnpm format` - Format code with Prettier
-- `pnpm format:check` - Check code formatting
-- `pnpm clean` - Clean build artifacts
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint errors
+- `npm run type-check` - Run TypeScript type checking
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check code formatting
+- `npm run clean` - Clean build artifacts
 
 ## 🎨 Customization
 
 ### Update Resume Data
 
-Edit `data/resume.ts` to update your personal information, experiences, portfolio, etc.
+Edit `features/resume/data/resume.ts` to update your personal information, experiences, portfolio, etc.
 
 ### Styling
 
@@ -94,7 +94,7 @@ Edit `data/resume.ts` to update your personal information, experiences, portfoli
 ### Components
 
 - UI components: `components/ui/`
-- Resume components: `components/resume/`
+- Resume feature components: `features/resume/components/`
 
 ## 📦 Deployment
 
@@ -108,7 +108,7 @@ Edit `data/resume.ts` to update your personal information, experiences, portfoli
 
 Build the project:
 ```bash
-pnpm build
+npm run build
 ```
 
 The output will be in the `.next` directory.

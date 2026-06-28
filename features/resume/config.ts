@@ -1,9 +1,5 @@
 export const RESUME_CONFIG = {
   title: "Indra's Resume",
-  lastUpdated: new Date().toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-  }),
 } as const
 
 export const SOCIAL_LINKS = {

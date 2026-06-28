@@ -1,13 +1,13 @@
 import type {
+  Achievement,
+  Certification,
+  Education,
   ExperienceItem,
+  Organization,
+  PersonalInfo,
   PortfolioItem,
   TechStack,
-  PersonalInfo,
-  Education,
-  Certification,
-  Achievement,
-  Organization,
-} from "@/types"
+} from "@/features/resume/types"
 
 export const personalInfo: PersonalInfo = {
   name: "Indra Cahya Edytya",
@@ -16,8 +16,7 @@ export const personalInfo: PersonalInfo = {
   phone: "+62 813 3563 0404",
   location: "Surabaya, Indonesia",
   birthDate: "1994-03-22",
-  dateOfBirth: "Surabaya, 22 March 1994",
-  age: 32,
+  birthPlace: "Surabaya",
   gender: "Male",
   status: "Married",
   address: "Bali, Indonesia",
@@ -36,11 +35,20 @@ export const personalInfo: PersonalInfo = {
   ],
 }
 
-export const bio = `A 9+ years Software Engineer with extensive expertise in building scalable & maintainable applications. 
-Specialize in modern technologies, delivering high-quality solutions that solve complex business challenges. 
+export const bio = `A 9+ years Software Engineer with extensive expertise in building scalable & maintainable applications.
+Specialize in modern technologies, delivering high-quality solutions that solve complex business challenges.
 With a proven track record in full-stack development, system architecture, and project management, I bring a comprehensive approach to software engineering that combines technical excellence with strategic thinking.`
 
 export const experiences: ExperienceItem[] = [
+  {
+    period: "Apr 2026 - Present",
+    company: "Juicebox Indonesia, South Denpasar, Bali",
+    timing: "Full Time, Hybrid",
+    role: "Software Engineer",
+    description: [
+      "Joined Juicebox Indonesia as a Software Engineer after being connected to the opportunity through LinkedIn.",
+    ],
+  },
   {
     period: "Apr 2025 - Present",
     company: "Primuse, Bali",
@@ -52,13 +60,23 @@ export const experiences: ExperienceItem[] = [
     ],
   },
   {
-    period: "Jun 2019 - Mar 2025",
+    period: "Jan 2020 - Mar 2025",
     company: "PT Kode Kreatif Digital, Sidoarjo",
     timing: "Full Time, Hybrid",
     role: "Senior Fullstack Software Engineer",
     description: [
       "Develop web apps and hybrid mobile apps (profile, online store, education, health, finance, custom)",
       "Technologies: TypeScript, Material UI, Tailwind, Ant Design, ReactJS, Redux, NextJS, ExpressJS, Laravel, React Native, MySQL, PostgreSQL, ORM, GitHub, GraphQL, REST API, Web Socket, Golang, Python, Docker, Kubernetes",
+    ],
+  },
+  {
+    period: "Jun 2019 - Dec 2019",
+    company: "PT Bank BTPN Tbk, Jakarta",
+    timing: "Full Time, Remote",
+    role: "Software Engineer",
+    description: [
+      "Contributed to the Jenius bank app using JavaScript, TypeScript, ReactJS, React Native, Redux, REST API, GraphQL, and database technologies.",
+      "Joined through CHIP (Creative Hacknology Intensive Program) by Bank BTPN.",
     ],
   },
   {
@@ -174,7 +192,7 @@ export const techSkills = [
   "Performance optimization, bottleneck resolution, and debugging expertise",
   "System architecture design, security implementation, and design patterns",
   "End-to-end project management: planning, monitoring, optimization, and documentation",
-]
+] as const
 
 export const techStacks: TechStack[] = [
   {
@@ -236,7 +254,7 @@ export const techStacks: TechStack[] = [
   {
     group: "Frontend Development",
     category: "Frameworks",
-    items: "Next.js, Remix React-Router, Preact",
+    items: "Next.js, Remix React-Router, Preact, Statamic",
   },
   {
     group: "Frontend Development",
@@ -292,13 +310,13 @@ export const techStacks: TechStack[] = [
   },
   {
     group: "AI & Automation",
-    category: "LLMs & AI",
-    items: "GPT, Claude, Gemini, Llama, Prompting, Model, Context",
+    category: "LLMs",
+    items: "GPT, Claude, Gemini, Llama, N8n",
   },
   {
     group: "AI & Automation",
     category: "Agentic Workflows",
-    items: "Agentic AI, Cursor, Copilot, Vibe Coding, Rules, MCP, Agent, Models, PRD",
+    items: "Agentic AI, Vs Code/Cursor, Rules, Skills, MCP, Agents, Models, PRDs & Plans, Prompting.",
   },
   {
     group: "Quality Assurance",

@@ -33,6 +33,7 @@ export interface SkillSets {
   name: string
   skills: string[]
 }
+
 export interface PersonalInfo {
   name: string
   title: string
@@ -40,8 +41,7 @@ export interface PersonalInfo {
   phone: string
   location: string
   birthDate?: string
-  dateOfBirth: string
-  age: number
+  birthPlace?: string
   gender: string
   status: string
   address: string

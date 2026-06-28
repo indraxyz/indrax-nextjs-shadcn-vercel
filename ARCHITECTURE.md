@@ -7,10 +7,10 @@ This document describes the architecture and design decisions for the Resume/CV 
 ```
 ├── app/                      # Next.js App Router
 │   ├── layout.tsx           # Root layout with metadata
-│   ├── page.tsx             # Main resume page (client component)
+│   ├── page.tsx             # Server entry for the resume page
 │   └── globals.css          # Global styles with Tailwind v4
 │
-├── components/              # React components
+├── components/              # Shared UI primitives
 │   ├── ui/                  # shadcn/ui base components
 │   │   ├── avatar.tsx
 │   │   ├── badge.tsx
@@ -18,19 +18,14 @@ This document describes the architecture and design decisions for the Resume/CV 
 │   │   ├── card.tsx
 │   │   ├── separator.tsx
 │   │   └── timeline.tsx
-│   └── resume/              # Resume-specific components
-│       ├── info-item.tsx    # Reusable info display component
-│       ├── section-header.tsx # Section header with icon
-│       └── index.ts         # Barrel export
 │
-├── data/                    # Data layer
-│   └── resume.ts           # All resume data (experiences, portfolio, etc.)
-│
-├── types/                   # TypeScript definitions
-│   └── index.ts            # All type definitions
-│
-├── constants/               # Application constants
-│   └── index.ts            # Config values, social links, etc.
+├── features/
+│   └── resume/
+│       ├── components/      # Feature UI, section cards, and drawer
+│       ├── data/            # Resume source content
+│       ├── utils/           # Feature-specific derived helpers
+│       ├── config.ts        # Resume config and links
+│       └── types.ts         # Resume domain types
 │
 ├── lib/                     # Utility functions
 │   └── utils/
@@ -45,10 +40,11 @@ This document describes the architecture and design decisions for the Resume/CV 
 ## 🏗️ Architecture Principles
 
 ### 1. **Separation of Concerns**
-- **Data**: All resume data is separated into `data/resume.ts`
-- **Types**: Type definitions are centralized in `types/index.ts`
+- **Feature ownership**: Resume code lives together under `features/resume/`
+- **Data**: Resume source data is separated into `features/resume/data/resume.ts`
+- **Types**: Resume domain types live in `features/resume/types.ts`
 - **Components**: UI components are separated from business logic
-- **Utilities**: Reusable functions are in `lib/utils/`
+- **Utilities**: Shared utilities stay in `lib/utils/`, while resume-specific derivations live in `features/resume/utils/`
 
 ### 2. **Type Safety**
 - Full TypeScript implementation
@@ -57,14 +53,15 @@ This document describes the architecture and design decisions for the Resume/CV 
 - No `any` types used
 
 ### 3. **Component Reusability**
-- Reusable components in `components/resume/`
+- Shared UI primitives in `components/ui/`
+- Resume-specific components in `features/resume/components/`
 - Base UI components from shadcn/ui
 - Consistent component patterns
 
 ### 4. **Maintainability**
-- Clear folder structure
-- Barrel exports for clean imports
-- Constants extracted to separate files
+- Feature-based folder structure
+- Smaller focused components for sidebar cards and sections
+- Derived values are computed from source data instead of duplicated
 - Single source of truth for data
 
 ### 5. **Developer Experience**
@@ -77,13 +74,13 @@ This document describes the architecture and design decisions for the Resume/CV 
 ## 🔄 Data Flow
 
 ```
-data/resume.ts (Source of Truth)
+features/resume/data/resume.ts (Source of Truth)
     ↓
-types/index.ts (Type Definitions)
+features/resume/types.ts (Type Definitions)
     ↓
-app/page.tsx (Presentation Layer)
+features/resume/components/resume-page.tsx (Presentation Layer)
     ↓
-components/resume/ (Reusable Components)
+features/resume/components/ (Feature Components)
     ↓
 components/ui/ (Base UI Components)
 ```
@@ -101,21 +98,21 @@ components/ui/ (Base UI Components)
 ### Component Organization
 
 - **UI Components** (`components/ui/`): Base design system components
-- **Resume Components** (`components/resume/`): Domain-specific components
-- **Page Components** (`app/`): Page-level composition
+- **Resume Feature** (`features/resume/`): Domain-specific data, types, config, and components
+- **Page Components** (`app/`): Thin route entry points
 
 ### Data Management
 
-- All resume data is in a single file for easy updates
+- Resume data stays in one feature-owned file for easy updates
 - Data is typed for safety
-- Constants are extracted for configuration
+- Derived values such as age are computed from raw data
 
 ## 🛠️ Development Workflow
 
-1. **Update Data**: Edit `data/resume.ts`
-2. **Add Types**: Update `types/index.ts` if needed
-3. **Create Components**: Add to `components/resume/` or `components/ui/`
-4. **Use in Pages**: Import and use in `app/page.tsx`
+1. **Update Data**: Edit `features/resume/data/resume.ts`
+2. **Add Types**: Update `features/resume/types.ts` if needed
+3. **Create Components**: Add feature components under `features/resume/components/` or shared primitives under `components/ui/`
+4. **Use in Pages**: Compose feature entry points from `app/page.tsx`
 
 ## 📝 Code Style
 
@@ -136,4 +133,3 @@ Potential enhancements:
 - [ ] Add PDF generation API route
 - [ ] Add analytics
 - [ ] Add SEO improvements
-
