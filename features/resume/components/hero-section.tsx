@@ -5,7 +5,7 @@ import { ProfileAvatar } from "@/features/resume/components/profile-avatar"
 
 export function HeroSection() {
   return (
-    <Card className="mb-8 overflow-hidden rounded-none border-2 shadow-none">
+    <Card className="mb-8 overflow-hidden border-2 border-border bg-card">
       <CardContent className="p-8 xl:p-12">
         <div className="flex flex-col gap-10 xl:flex-row xl:items-start">
           <div className="shrink-0 justify-center text-center xl:justify-start">
@@ -16,15 +16,15 @@ export function HeroSection() {
               <h1 className="text-4xl font-extrabold uppercase tracking-tighter text-foreground md:text-5xl">
                 {personalInfo.name}
               </h1>
-              <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground md:text-base">
+              <p className="text-sm font-black uppercase tracking-[0.22em] text-muted-foreground md:text-base">
                 {personalInfo.title}
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-2 xl:justify-start">
+            <div className="hidden flex-wrap justify-center gap-2 sm:flex xl:justify-start">
               {personalInfo.highlightSkills?.map((skill) => (
                 <Badge
                   variant="outline"
-                  className="border-foreground px-3 py-1 text-xs uppercase tracking-widest text-foreground"
+                  className="border-border bg-accent px-3 py-1 text-xs text-accent-foreground"
                   key={skill}
                 >
                   {skill}

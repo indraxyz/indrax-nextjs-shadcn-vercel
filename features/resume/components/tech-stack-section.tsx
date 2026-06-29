@@ -17,17 +17,17 @@ const groupedStacks = techStacks.reduce(
 
 export function TechStackSection() {
   return (
-    <Card className="rounded-none border-2 shadow-none">
-      <CardHeader className="border-b-2 bg-muted/30">
+    <Card className="border-2 border-border bg-card">
+      <CardHeader className="border-b-2 border-border bg-muted">
         <SectionHeader icon={<Code className="h-5 w-5" />} title="Tech Stack" />
       </CardHeader>
       <CardContent className="flex gap-6 overflow-x-auto pb-6 pt-6">
         {Object.entries(groupedStacks).map(([groupName, stacks]) => (
           <Card
             key={groupName}
-            className="flex w-[350px] max-w-[85vw] shrink-0 flex-col rounded-none border-2 border-t-4 border-t-foreground shadow-none"
+            className="flex w-[350px] max-w-[85vw] shrink-0 flex-col border-2 border-border border-t-[6px] border-t-accent bg-card"
           >
-            <CardHeader className="border-b pb-4">
+            <CardHeader className="border-b-2 border-border pb-4">
               <CardTitle className="text-base font-extrabold uppercase tracking-tight">
                 {groupName}
               </CardTitle>

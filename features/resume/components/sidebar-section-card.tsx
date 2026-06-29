@@ -9,13 +9,13 @@ interface SidebarSectionCardProps {
 
 export function SidebarSectionCard({ title, icon, children }: SidebarSectionCardProps) {
   return (
-    <Card className="rounded-none border-2 shadow-none">
-      <CardHeader className="border-b-2 bg-muted/30">
+    <Card className="border-2 border-border bg-card">
+      <CardHeader className="border-b-2 border-border bg-muted">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center border-2 border-border bg-primary text-primary-foreground shadow-brutal-sm">
             {icon}
           </div>
-          <h2 className="text-2xl font-bold">{title}</h2>
+          <h2 className="text-2xl font-black uppercase tracking-tight">{title}</h2>
         </div>
       </CardHeader>
       <CardContent className="pt-6">{children}</CardContent>

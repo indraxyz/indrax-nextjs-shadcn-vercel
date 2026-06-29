@@ -36,8 +36,8 @@ function ExperienceDetails({ company, period, timing, role, description }: (type
 
 export function ExperienceSection() {
   return (
-    <Card className="rounded-none border-2 shadow-none">
-      <CardHeader className="border-b-2 bg-muted/30">
+    <Card className="border-2 border-border bg-card">
+      <CardHeader className="border-b-2 border-border bg-muted">
         <SectionHeader icon={<Briefcase className="h-5 w-5" />} title="Professional Experience" />
       </CardHeader>
       <CardContent className="pt-8">
@@ -60,9 +60,9 @@ export function ExperienceSection() {
           {experiences.map((experience) => (
             <Card
               key={`${experience.company}-${experience.period}`}
-              className="max-w-96 shrink-0 rounded-none border-2 border-t-4 border-t-foreground shadow-none"
+              className="max-w-96 shrink-0 border-2 border-border border-t-[6px] border-t-primary bg-card"
             >
-              <CardHeader className="border-b-2 bg-muted/30 pb-4">
+              <CardHeader className="border-b-2 border-border bg-muted pb-4">
                 <div className="mb-3 flex flex-wrap items-center gap-2">
                   <p className="border border-border bg-muted px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground">
                     {experience.period}

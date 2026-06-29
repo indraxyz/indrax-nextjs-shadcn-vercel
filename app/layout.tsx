@@ -1,10 +1,11 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import localFont from "next/font/local"
 import "./globals.css"
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const geist = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist",
+  weight: "100 900",
 })
 
 export const metadata: Metadata = {
@@ -18,11 +19,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="min-h-screen bg-background font-sans antialiased">
+    <html lang="en" className={geist.variable}>
+      <body className="min-h-screen bg-background [font-family:var(--font-geist)] antialiased">
         {children}
       </body>
     </html>
   )
 }
-

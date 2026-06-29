@@ -14,17 +14,17 @@ interface SectionHeaderProps {
 export function SectionHeader({ icon, title, link }: SectionHeaderProps) {
   return (
     <div className="mb-6 flex items-center gap-3">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+      <div className="shadow-brutal-sm flex h-10 w-10 shrink-0 items-center justify-center border-2 border-border bg-primary text-primary-foreground">
         {icon}
       </div>
       <div className="flex flex-col">
-        <h2 className="text-2xl font-bold">{title}</h2>
+        <h2 className="text-2xl font-black uppercase tracking-tight">{title}</h2>
         {link && (
           <Link
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary hover:underline"
+            className="flex items-center gap-2 text-sm font-bold uppercase tracking-[0.16em] text-muted-foreground transition-colors hover:text-foreground hover:underline"
           >
             {link.textLink} <ExternalLink className="h-4 w-4" />
           </Link>
