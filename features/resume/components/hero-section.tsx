@@ -5,26 +5,26 @@ import { ProfileAvatar } from "@/features/resume/components/profile-avatar"
 
 export function HeroSection() {
   return (
-    <Card className="mb-8 overflow-hidden border-2 border-border bg-card">
-      <CardContent className="p-8 xl:p-12">
+    <Card className="variant-primary variant-surface mb-8 overflow-hidden bg-[var(--variant-soft)]">
+      <CardContent className="relative p-8 xl:p-12">
         <div className="flex flex-col gap-10 xl:flex-row xl:items-start">
           <div className="shrink-0 justify-center text-center xl:justify-start">
             <ProfileAvatar src="/foto-profile.jpg" alt={personalInfo.name} fallback="ICE" />
           </div>
           <div className="flex-1 space-y-6 text-center xl:text-left">
             <div className="space-y-2">
-              <h1 className="text-4xl font-extrabold uppercase tracking-tighter text-foreground md:text-5xl">
+              <h1 className="text-4xl font-black uppercase tracking-tight text-foreground md:text-5xl">
                 {personalInfo.name}
               </h1>
-              <p className="text-sm font-black uppercase tracking-[0.22em] text-muted-foreground md:text-base">
+              <p className="text-sm font-black uppercase tracking-[0.18em] text-[var(--variant-border)] md:text-base">
                 {personalInfo.title}
               </p>
             </div>
             <div className="hidden flex-wrap justify-center gap-2 sm:flex xl:justify-start">
               {personalInfo.highlightSkills?.map((skill) => (
                 <Badge
-                  variant="outline"
-                  className="border-border bg-accent px-3 py-1 text-xs text-accent-foreground"
+                  variant="ghost"
+                  className="variant-primary variant-soft-chip px-3 py-1 text-xs shadow-none"
                   key={skill}
                 >
                   {skill}

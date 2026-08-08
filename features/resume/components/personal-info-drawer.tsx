@@ -19,29 +19,30 @@ export function PersonalInfoDrawer() {
     <Drawer direction="right">
       <DrawerTrigger asChild>
         <Button
-          variant="outline"
-          className="rounded-none border-2 border-foreground font-bold uppercase tracking-widest"
+          variant="ghost"
+          className="font-bold"
+          aria-label="Open personal information"
         >
           <User className="h-5 w-5" />
         </Button>
       </DrawerTrigger>
-      <DrawerContent className="w-full rounded-none border-l-2 border-foreground sm:max-w-xl">
-        <DrawerHeader className="border-b-2 border-foreground bg-muted/30">
-          <DrawerTitle className="font-extrabold uppercase tracking-tight">
+      <DrawerContent className="w-full rounded-none border-l-2 border-border sm:max-w-xl">
+        <DrawerHeader className="border-b-2 border-border bg-muted/45">
+          <DrawerTitle className="font-black uppercase tracking-tight">
             Personal Information
           </DrawerTitle>
-          <DrawerDescription className="text-xs font-semibold uppercase tracking-widest">
+          <DrawerDescription className="text-xs font-semibold">
             Summary of my personal details, education, and organizations
           </DrawerDescription>
         </DrawerHeader>
         <div className="overflow-y-auto px-4 pb-4 pt-6">
           <SidebarInfo />
         </div>
-        <DrawerFooter className="border-t-2 border-foreground">
+        <DrawerFooter className="border-t-2 border-border">
           <DrawerClose asChild>
             <Button
-              variant="outline"
-              className="rounded-none border-2 border-foreground font-bold uppercase tracking-widest"
+              variant="ghost"
+              className="font-bold"
             >
               Close
             </Button>

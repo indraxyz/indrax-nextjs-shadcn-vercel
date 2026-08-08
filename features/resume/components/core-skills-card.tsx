@@ -4,11 +4,11 @@ import { Award } from "lucide-react"
 
 export function CoreSkillsCard() {
   return (
-    <SidebarSectionCard icon={<Award className="h-5 w-5" />} title="Core Skills">
+    <SidebarSectionCard icon={<Award className="h-5 w-5" />} title="Core Skills" variant="tertiary">
       <ul className="space-y-3">
         {techSkills.map((skill) => (
           <li key={skill} className="flex items-start gap-3">
-            <span className="mt-1.5 h-2 w-2 shrink-0 bg-foreground" />
+            <span className="variant-tertiary mt-1.5 h-2 w-2 shrink-0 rounded-none bg-[var(--variant-bg)]" />
             <span className="text-sm font-medium leading-relaxed">{skill}</span>
           </li>
         ))}

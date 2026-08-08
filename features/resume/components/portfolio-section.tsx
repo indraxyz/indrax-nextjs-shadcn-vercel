@@ -7,11 +7,12 @@ import Link from "next/link"
 
 export function PortfolioSection() {
   return (
-    <Card className="border-2 border-border bg-card">
-      <CardHeader className="border-b-2 border-border bg-muted">
+    <Card className="variant-primary variant-surface bg-[var(--variant-soft)]">
+      <CardHeader className="variant-surface-header border-b-2">
         <SectionHeader
           icon={<Code className="h-5 w-5" />}
           title="Portfolio & Projects"
+          variant="primary"
           link={{ href: SOCIAL_LINKS.github, textLink: "View My Github" }}
         />
       </CardHeader>
@@ -19,11 +20,11 @@ export function PortfolioSection() {
         {portfolioItems.map((item) => (
           <Card
             key={`${item.title}-${item.year}`}
-            className="flex w-[350px] max-w-[85vw] shrink-0 flex-col border-2 border-border border-t-[6px] border-t-secondary bg-card"
+            className="variant-secondary variant-border flex w-[350px] max-w-[85vw] shrink-0 flex-col bg-[var(--variant-soft)]"
           >
-            <CardHeader className="border-b-2 border-border pb-4">
+            <CardHeader className="variant-surface-header border-b-2 pb-4">
               <div className="flex items-start justify-between gap-4">
-                <CardTitle className="text-base font-extrabold uppercase tracking-tight leading-snug">
+                <CardTitle className="text-base font-black uppercase leading-snug tracking-tight">
                   {item.title}
                 </CardTitle>
                 {item.link && (
@@ -33,7 +34,7 @@ export function PortfolioSection() {
                     rel="noopener noreferrer"
                     className="shrink-0"
                   >
-                    <ExternalLink className="h-4 w-4 text-foreground transition-colors hover:text-secondary-foreground" />
+                    <ExternalLink className="h-4 w-4 text-foreground transition-colors hover:text-[var(--component-variant-secondary-bg)]" />
                   </Link>
                 )}
               </div>

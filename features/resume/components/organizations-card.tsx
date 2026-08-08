@@ -9,7 +9,7 @@ export function OrganizationsCard() {
   }
 
   return (
-    <SidebarSectionCard icon={<Users className="h-5 w-5" />} title="Organizations">
+    <SidebarSectionCard icon={<Users className="h-5 w-5" />} title="Organizations" variant="tertiary">
       <div className="space-y-4">
         {organizations.map((organization, index) => (
           <div key={`${organization.title}-${organization.period}`}>
@@ -19,7 +19,7 @@ export function OrganizationsCard() {
                 {organization.description}
               </p>
             )}
-            <p className="mt-2 inline-block bg-muted px-2 py-1 text-xs font-bold text-foreground">
+            <p className="variant-tertiary variant-soft-chip mt-2 inline-block rounded-none border-2 px-2 py-1 text-xs font-black uppercase tracking-[0.12em] text-foreground">
               {organization.period}
             </p>
             {index < organizations.length - 1 && <Separator className="mt-4" />}

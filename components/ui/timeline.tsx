@@ -23,8 +23,8 @@ const TimelineItem = React.forwardRef<HTMLDivElement, TimelineItemProps>(
     return (
       <div ref={ref} className={cn("relative flex gap-4", className)} {...props}>
         <div className="relative flex w-8 shrink-0 flex-col items-center">
-          <div className="flex h-8 w-8 items-center justify-center rounded-none border-2 border-primary bg-background">
-            <div className="h-2 w-2 rounded-none bg-primary" />
+          <div className="variant-primary flex h-8 w-8 items-center justify-center rounded-none border-2 border-[var(--semantic-border-strong)] bg-[var(--variant-soft)] shadow-soft-sm">
+            <div className="h-2.5 w-2.5 rounded-none bg-[var(--variant-bg)]" />
           </div>
           {!isLast && (
             <div className="absolute top-8 -bottom-8 left-1/2 w-0.5 -translate-x-1/2 bg-border" />

@@ -17,25 +17,25 @@ const groupedStacks = techStacks.reduce(
 
 export function TechStackSection() {
   return (
-    <Card className="border-2 border-border bg-card">
-      <CardHeader className="border-b-2 border-border bg-muted">
-        <SectionHeader icon={<Code className="h-5 w-5" />} title="Tech Stack" />
+    <Card className="variant-primary variant-surface bg-[var(--variant-soft)]">
+      <CardHeader className="variant-surface-header border-b-2">
+        <SectionHeader icon={<Code className="h-5 w-5" />} title="Tech Stack" variant="primary" />
       </CardHeader>
       <CardContent className="flex gap-6 overflow-x-auto pb-6 pt-6">
         {Object.entries(groupedStacks).map(([groupName, stacks]) => (
           <Card
             key={groupName}
-            className="flex w-[350px] max-w-[85vw] shrink-0 flex-col border-2 border-border border-t-[6px] border-t-accent bg-card"
+            className="variant-secondary variant-border flex w-[350px] max-w-[85vw] shrink-0 flex-col bg-[var(--variant-soft)]"
           >
-            <CardHeader className="border-b-2 border-border pb-4">
-              <CardTitle className="text-base font-extrabold uppercase tracking-tight">
+            <CardHeader className="variant-surface-header border-b-2 pb-4">
+              <CardTitle className="text-base font-black uppercase tracking-tight">
                 {groupName}
               </CardTitle>
             </CardHeader>
             <CardContent className="max-h-72 space-y-5 overflow-y-auto pt-4">
               {stacks.map((stack) => (
                 <div key={`${groupName}-${stack.category}`} className="space-y-1.5">
-                  <p className="inline-block border border-border bg-muted px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground">
+                  <p className="variant-secondary variant-soft-chip inline-block rounded-none border-2 px-2 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-foreground">
                     {stack.category}
                   </p>
                   <p className="text-sm font-medium leading-relaxed text-foreground">{stack.items}</p>

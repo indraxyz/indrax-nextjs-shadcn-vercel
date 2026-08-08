@@ -5,7 +5,7 @@ import { GraduationCap } from "lucide-react"
 
 export function EducationCard() {
   return (
-    <SidebarSectionCard icon={<GraduationCap className="h-5 w-5" />} title="Education">
+    <SidebarSectionCard icon={<GraduationCap className="h-5 w-5" />} title="Education" variant="tertiary">
       <div className="space-y-6">
         {education.map((item, index) => (
           <div key={`${item.institution}-${item.period}`} className="space-y-3">
@@ -13,7 +13,7 @@ export function EducationCard() {
               <p className="mb-1 text-sm font-bold uppercase tracking-wider">{item.degree}</p>
               <p className="text-sm font-medium">{item.institution}</p>
               <p className="mb-1 text-sm text-muted-foreground">{item.field}</p>
-              <p className="mt-1 inline-block bg-muted px-2 py-1 text-xs font-bold text-foreground">
+              <p className="variant-tertiary variant-soft-chip mt-1 inline-block rounded-none border-2 px-2 py-1 text-xs font-black uppercase tracking-[0.12em] text-foreground">
                 {item.period}
                 {item.gpa && ` • GPA: ${item.gpa}`}
               </p>
