@@ -15,7 +15,7 @@ interface SectionHeaderProps {
 
 export function SectionHeader({ icon, title, variant = "primary", link }: SectionHeaderProps) {
   return (
-    <div className="mb-6 flex items-center gap-3">
+    <div className="flex items-center gap-3">
       <div
         className={`variant-icon flex h-10 w-10 shrink-0 items-center justify-center rounded-none border-2 ${variantClassNames[variant]}`}
       >
