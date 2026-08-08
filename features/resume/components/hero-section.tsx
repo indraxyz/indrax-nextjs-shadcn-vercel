@@ -20,10 +20,10 @@ export function HeroSection() {
                 {personalInfo.title}
               </p>
             </div>
-            <div className="hidden flex-wrap justify-center gap-2 sm:flex xl:justify-start">
+            <div className="flex flex-wrap justify-center gap-2 xl:justify-start">
               {personalInfo.highlightSkills?.map((skill) => (
                 <Badge
-                  variant="ghost"
+                  variant="primary"
                   className="variant-primary variant-soft-chip px-3 py-1 text-xs shadow-none"
                   key={skill}
                 >

@@ -20,7 +20,7 @@ export function PersonalInfoDrawer() {
       <DrawerTrigger asChild>
         <Button
           variant="ghost"
-          className="font-bold"
+          size="icon"
           aria-label="Open personal information"
         >
           <User className="h-5 w-5" />
