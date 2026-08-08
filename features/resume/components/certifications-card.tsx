@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export function CertificationsCard() {
   return (
-    <SidebarSectionCard icon={<Award className="h-5 w-5" />} title="Certifications">
+    <SidebarSectionCard icon={<Award className="h-5 w-5" />} title="Certifications" variant="tertiary">
       <div className="space-y-4">
         {certifications.map((certification, index) => (
           <div key={`${certification.title}-${certification.period}`}>
@@ -22,7 +22,7 @@ export function CertificationsCard() {
                 View Certificate <ExternalLink className="h-3 w-3" />
               </Link>
             )}
-            <p className="mt-2 inline-block bg-muted px-2 py-1 text-xs font-bold text-foreground">
+            <p className="variant-tertiary variant-soft-chip mt-2 inline-block rounded-none border-2 px-2 py-1 text-xs font-black uppercase tracking-[0.12em] text-foreground">
               {certification.period}
             </p>
             {index < certifications.length - 1 && <Separator className="mt-4" />}

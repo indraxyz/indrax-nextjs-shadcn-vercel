@@ -10,7 +10,7 @@ export function PersonalCard() {
   const birthDetails = formatBirthDetails(personalInfo.birthPlace, personalInfo.birthDate)
 
   return (
-    <SidebarSectionCard icon={<User className="h-5 w-5" />} title="Personal">
+    <SidebarSectionCard icon={<User className="h-5 w-5" />} title="Personal" variant="tertiary">
       <div className="space-y-1">
         <InfoItem icon={<User className="h-4 w-4" />} label="Name" value={personalInfo.name} />
         <Separator className="my-2" />

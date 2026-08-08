@@ -8,46 +8,250 @@
   --breakpoint-xl: 1536px;
   --breakpoint-2xl: 1536px;
 
-  /* Neo-brutalist Theme */
-  --color-background: oklch(97.8% 0.02 95);
-  --color-foreground: oklch(21% 0.01 260);
-  --color-card: oklch(99% 0.01 95);
-  --color-card-foreground: oklch(21% 0.01 260);
-  --color-popover: oklch(99% 0.01 95);
-  --color-popover-foreground: oklch(21% 0.01 260);
-  --color-primary: oklch(72% 0.19 83);
-  --color-primary-foreground: oklch(21% 0.01 260);
-  --color-secondary: oklch(83% 0.14 26);
-  --color-secondary-foreground: oklch(21% 0.01 260);
-  --color-muted: oklch(92% 0.02 95);
-  --color-muted-foreground: oklch(40% 0.02 260);
-  --color-accent: oklch(79% 0.13 156);
-  --color-accent-foreground: oklch(21% 0.01 260);
-  --color-destructive: oklch(62.8% 0.257 29.24);
-  --color-destructive-foreground: oklch(99% 0.01 95);
-  --color-border: oklch(21% 0.01 260);
-  --color-input: oklch(21% 0.01 260);
-  --color-ring: oklch(21% 0.01 260);
-  --radius: 0rem;
+  --color-background: var(--semantic-surface-page);
+  --color-foreground: var(--semantic-text-primary);
+  --color-card: var(--semantic-surface-card);
+  --color-card-foreground: var(--semantic-text-primary);
+  --color-popover: var(--semantic-surface-overlay);
+  --color-popover-foreground: var(--semantic-text-primary);
+  --color-primary: var(--semantic-action-primary);
+  --color-primary-foreground: var(--semantic-action-primary-text);
+  --color-secondary: var(--semantic-action-secondary);
+  --color-secondary-foreground: var(--semantic-action-secondary-text);
+  --color-muted: var(--semantic-surface-muted);
+  --color-muted-foreground: var(--semantic-text-secondary);
+  --color-accent: var(--semantic-action-tertiary);
+  --color-accent-foreground: var(--semantic-action-tertiary-text);
+  --color-destructive: var(--semantic-status-danger);
+  --color-destructive-foreground: var(--semantic-status-danger-text);
+  --color-border: var(--semantic-border-default);
+  --color-input: var(--semantic-border-strong);
+  --color-ring: var(--semantic-focus-ring);
+  --radius: 0.5rem;
 }
 
 @layer base {
+  :root {
+    color-scheme: light;
+
+    --primitive-brand-950: #063b00;
+    --primitive-brand-800: #266210;
+    --primitive-brand-500: #90b800;
+    --primitive-brand-300: #e1e100;
+    --primitive-neutral-0: #ffffff;
+    --primitive-neutral-50: #fafcf5;
+    --primitive-neutral-100: #f1f6e8;
+    --primitive-neutral-200: #dce8d0;
+    --primitive-neutral-700: #394635;
+    --primitive-neutral-900: #152111;
+    --primitive-danger-700: #b42318;
+    --primitive-danger-50: #fff1ef;
+
+    --semantic-surface-page: var(--primitive-neutral-0);
+    --semantic-surface-card: rgba(255, 255, 255, 0.92);
+    --semantic-surface-muted: var(--primitive-neutral-50);
+    --semantic-surface-overlay: var(--primitive-neutral-0);
+    --semantic-text-primary: var(--primitive-neutral-900);
+    --semantic-text-secondary: var(--primitive-neutral-700);
+    --semantic-border-default: var(--primitive-brand-950);
+    --semantic-border-strong: var(--primitive-brand-950);
+    --semantic-focus-ring: var(--primitive-brand-500);
+    --semantic-action-primary: var(--primitive-brand-950);
+    --semantic-action-primary-text: var(--primitive-neutral-0);
+    --semantic-action-secondary: var(--primitive-brand-800);
+    --semantic-action-secondary-text: var(--primitive-neutral-0);
+    --semantic-action-tertiary: var(--primitive-brand-300);
+    --semantic-action-tertiary-text: var(--primitive-brand-950);
+    --semantic-status-danger: var(--primitive-danger-700);
+    --semantic-status-danger-text: var(--primitive-neutral-0);
+
+    --component-variant-primary-bg: var(--semantic-action-primary);
+    --component-variant-primary-fg: var(--semantic-action-primary-text);
+    --component-variant-primary-border: var(--semantic-action-primary);
+    --component-variant-primary-soft: color-mix(in oklab, var(--semantic-action-primary) 12%, white);
+    --component-variant-primary-hover: color-mix(in oklab, var(--semantic-action-primary) 86%, white);
+    --component-variant-primary-icon-shadow: var(--primitive-brand-500);
+
+    --component-variant-secondary-bg: var(--semantic-action-secondary);
+    --component-variant-secondary-fg: var(--semantic-action-secondary-text);
+    --component-variant-secondary-border: var(--semantic-action-secondary);
+    --component-variant-secondary-soft: color-mix(in oklab, var(--semantic-action-secondary) 14%, white);
+    --component-variant-secondary-hover: color-mix(in oklab, var(--semantic-action-secondary) 82%, white);
+    --component-variant-secondary-icon-shadow: var(--primitive-brand-300);
+
+    --component-variant-tertiary-bg: var(--semantic-action-tertiary);
+    --component-variant-tertiary-fg: var(--semantic-action-tertiary-text);
+    --component-variant-tertiary-border: color-mix(in oklab, var(--semantic-action-tertiary) 80%, var(--semantic-action-primary));
+    --component-variant-tertiary-soft: color-mix(in oklab, var(--semantic-action-tertiary) 34%, white);
+    --component-variant-tertiary-hover: color-mix(in oklab, var(--semantic-action-tertiary) 78%, white);
+    --component-variant-tertiary-icon-shadow: var(--primitive-brand-950);
+
+    --component-variant-destructive-bg: var(--semantic-status-danger);
+    --component-variant-destructive-fg: var(--semantic-status-danger-text);
+    --component-variant-destructive-border: var(--semantic-status-danger);
+    --component-variant-destructive-soft: var(--primitive-danger-50);
+    --component-variant-destructive-hover: color-mix(in oklab, var(--semantic-status-danger) 90%, white);
+
+    --component-variant-ghost-bg: transparent;
+    --component-variant-ghost-fg: var(--semantic-text-primary);
+    --component-variant-ghost-border: transparent;
+    --component-variant-ghost-soft: var(--semantic-surface-muted);
+    --component-variant-ghost-hover: color-mix(in oklab, var(--semantic-action-tertiary) 16%, white);
+
+    --component-avatar-halo-inner: color-mix(in oklab, var(--primitive-brand-500) 18%, transparent);
+    --component-avatar-halo-middle: color-mix(in oklab, var(--primitive-brand-800) 14%, transparent);
+    --component-avatar-halo-outer: color-mix(in oklab, var(--primitive-brand-300) 10%, transparent);
+    --component-avatar-ring-shadow: color-mix(in oklab, var(--primitive-brand-950) 38%, transparent);
+  }
+
+  .dark {
+    color-scheme: dark;
+
+    --semantic-surface-page: #031f00;
+    --semantic-surface-card: rgba(6, 59, 0, 0.84);
+    --semantic-surface-muted: #0b2b05;
+    --semantic-surface-overlay: #061c02;
+    --semantic-text-primary: #f7fbe9;
+    --semantic-text-secondary: #c5d7b8;
+    --semantic-border-default: var(--primitive-brand-300);
+    --semantic-border-strong: var(--primitive-brand-300);
+    --semantic-focus-ring: var(--primitive-brand-300);
+    --semantic-action-primary: var(--primitive-brand-300);
+    --semantic-action-primary-text: var(--primitive-brand-950);
+    --semantic-action-secondary: var(--primitive-brand-500);
+    --semantic-action-secondary-text: var(--primitive-brand-950);
+    --semantic-action-tertiary: var(--primitive-brand-800);
+    --semantic-action-tertiary-text: var(--primitive-neutral-0);
+    --semantic-status-danger: #ff8a7d;
+    --semantic-status-danger-text: #320300;
+
+    --component-avatar-halo-inner: color-mix(in oklab, var(--primitive-brand-300) 20%, transparent);
+    --component-avatar-halo-middle: color-mix(in oklab, var(--primitive-brand-500) 16%, transparent);
+    --component-avatar-halo-outer: color-mix(in oklab, var(--primitive-neutral-0) 9%, transparent);
+    --component-avatar-ring-shadow: color-mix(in oklab, var(--primitive-brand-300) 38%, transparent);
+
+    --component-variant-primary-soft: color-mix(in oklab, var(--semantic-action-primary) 16%, var(--semantic-surface-page));
+    --component-variant-primary-hover: color-mix(in oklab, var(--semantic-action-primary) 88%, var(--primitive-neutral-0));
+    --component-variant-primary-icon-shadow: var(--primitive-brand-950);
+    --component-variant-secondary-soft: color-mix(in oklab, var(--semantic-action-secondary) 18%, var(--semantic-surface-page));
+    --component-variant-secondary-hover: color-mix(in oklab, var(--semantic-action-secondary) 84%, var(--primitive-neutral-0));
+    --component-variant-secondary-icon-shadow: var(--primitive-brand-950);
+    --component-variant-tertiary-soft: color-mix(in oklab, var(--semantic-action-tertiary) 34%, var(--semantic-surface-page));
+    --component-variant-tertiary-hover: color-mix(in oklab, var(--semantic-action-tertiary) 84%, var(--primitive-neutral-0));
+    --component-variant-tertiary-icon-shadow: var(--primitive-brand-300);
+    --component-variant-destructive-soft: color-mix(in oklab, var(--semantic-status-danger) 16%, var(--semantic-surface-page));
+    --component-variant-destructive-hover: color-mix(in oklab, var(--semantic-status-danger) 80%, var(--primitive-neutral-0));
+    --component-variant-ghost-hover: color-mix(in oklab, var(--semantic-action-tertiary) 22%, var(--semantic-surface-page));
+  }
+
   * {
     border-color: var(--color-border);
   }
 
   ::selection {
-    background-color: color-mix(in oklab, var(--color-primary) 70%, black 0%);
-    color: var(--color-foreground);
+    background-color: color-mix(in oklab, var(--semantic-action-tertiary) 72%, white);
+    color: var(--semantic-action-tertiary-text);
   }
 
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     background-image:
-      linear-gradient(to right, color-mix(in oklab, var(--color-border) 10%, transparent) 1px, transparent 1px),
-      linear-gradient(to bottom, color-mix(in oklab, var(--color-border) 10%, transparent) 1px, transparent 1px);
-    background-size: 28px 28px;
+      linear-gradient(to right, color-mix(in oklab, var(--semantic-border-default) 10%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklab, var(--semantic-border-default) 10%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--semantic-surface-page), var(--semantic-surface-muted));
+    background-size: 28px 28px, 28px 28px, auto;
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .variant-primary {
+    --variant-bg: var(--component-variant-primary-bg);
+    --variant-fg: var(--component-variant-primary-fg);
+    --variant-border: var(--component-variant-primary-border);
+    --variant-soft: var(--component-variant-primary-soft);
+    --variant-hover: var(--component-variant-primary-hover);
+    --variant-icon-shadow: var(--component-variant-primary-icon-shadow);
+  }
+
+  .variant-secondary {
+    --variant-bg: var(--component-variant-secondary-bg);
+    --variant-fg: var(--component-variant-secondary-fg);
+    --variant-border: var(--component-variant-secondary-border);
+    --variant-soft: var(--component-variant-secondary-soft);
+    --variant-hover: var(--component-variant-secondary-hover);
+    --variant-icon-shadow: var(--component-variant-secondary-icon-shadow);
+  }
+
+  .variant-tertiary {
+    --variant-bg: var(--component-variant-tertiary-bg);
+    --variant-fg: var(--component-variant-tertiary-fg);
+    --variant-border: var(--component-variant-tertiary-border);
+    --variant-soft: var(--component-variant-tertiary-soft);
+    --variant-hover: var(--component-variant-tertiary-hover);
+    --variant-icon-shadow: var(--component-variant-tertiary-icon-shadow);
+  }
+
+  .variant-destructive {
+    --variant-bg: var(--component-variant-destructive-bg);
+    --variant-fg: var(--component-variant-destructive-fg);
+    --variant-border: var(--component-variant-destructive-border);
+    --variant-soft: var(--component-variant-destructive-soft);
+    --variant-hover: var(--component-variant-destructive-hover);
+    --variant-icon-shadow: var(--component-variant-destructive-border);
+  }
+
+  .variant-ghost {
+    --variant-bg: var(--component-variant-ghost-bg);
+    --variant-fg: var(--component-variant-ghost-fg);
+    --variant-border: var(--component-variant-ghost-border);
+    --variant-soft: var(--component-variant-ghost-soft);
+    --variant-hover: var(--component-variant-ghost-hover);
+    --variant-icon-shadow: var(--semantic-border-strong);
+  }
+
+  .variant-surface {
+    border-color: var(--semantic-border-strong);
+    background: var(--variant-soft);
+  }
+
+  .variant-border {
+    border-color: var(--semantic-border-strong);
+  }
+
+  .variant-surface-header {
+    border-color: var(--semantic-border-strong);
+    background-color: var(--variant-bg);
+    color: var(--variant-fg);
+  }
+
+  .variant-icon {
+    color: var(--variant-fg);
+    border-color: var(--variant-icon-shadow);
+    background-color: var(--variant-bg);
+    box-shadow: 3px 3px 0 0 var(--variant-icon-shadow);
+  }
+
+  .variant-surface-header .variant-icon {
+    color: var(--variant-bg);
+    background-color: var(--variant-fg);
+  }
+
+  .variant-chip {
+    color: var(--variant-fg);
+    border-color: color-mix(in oklab, var(--variant-border) 30%, transparent);
+    background-color: var(--variant-bg);
+  }
+
+  .variant-soft-chip {
+    color: var(--variant-border);
+    border-color: var(--semantic-border-strong);
+    background-color: var(--variant-soft);
+  }
+
+  .dark .variant-soft-chip {
+    color: var(--semantic-text-primary);
   }
 }
 
@@ -66,33 +270,35 @@
 .bg-matte-gradient-animated {
   background-image: linear-gradient(
     270deg,
-    var(--color-primary),
-    var(--color-secondary),
-    color-mix(in oklab, var(--color-primary) 55%, white),
-    var(--color-primary)
+    var(--primitive-brand-950),
+    var(--primitive-brand-800),
+    var(--primitive-brand-500),
+    var(--primitive-brand-300),
+    var(--primitive-brand-950)
   ) !important;
   background-size: 220% 220% !important;
-  animation: gradient-walk 5.5s linear infinite !important;
+  animation: gradient-walk 8s linear infinite !important;
 }
 
 .bg-avatar-halo {
   background-image: radial-gradient(
     circle,
-    color-mix(in oklab, var(--color-primary) 38%, transparent) 0%,
-    color-mix(in oklab, var(--color-secondary) 26%, transparent) 34%,
-    color-mix(in oklab, white 18%, transparent) 56%,
-    transparent 76%
+    var(--component-avatar-halo-inner) 0%,
+    var(--component-avatar-halo-middle) 32%,
+    var(--component-avatar-halo-outer) 58%,
+    transparent 82%
   );
+  filter: blur(10px);
 }
 
-.shadow-brutal-sm {
-  box-shadow: 3px 3px 0 0 var(--color-border);
+.shadow-soft-sm {
+  box-shadow: 3px 3px 0 0 var(--semantic-border-strong);
 }
 
-.shadow-brutal {
-  box-shadow: 6px 6px 0 0 var(--color-border);
+.shadow-soft {
+  box-shadow: 6px 6px 0 0 var(--semantic-border-strong);
 }
 
-.shadow-brutal-lg {
-  box-shadow: 10px 10px 0 0 var(--color-border);
+.shadow-soft-lg {
+  box-shadow: 10px 10px 0 0 var(--semantic-border-strong);
 }

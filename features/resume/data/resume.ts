@@ -53,7 +53,7 @@ export const experiences: ExperienceItem[] = [
     period: "Apr 2025 - Present",
     company: "Primuse, Bali",
     timing: "Full Time, Hybrid",
-    role: "Senior Software Engineer",
+    role: "Software Engineer",
     description: [
       "Core team of Kisum App, development from inception, to production with a focus on architecture, scalable systems with best UI/UX and multi-tenant. Key modules developed include Artists, AI (Chat, Prediction), News, Events & Financials, Festivals, Venues, Vendors, and Market.",
       "Technologies: TypeScript, NextJs, UiUx (Tailwind & Shadcn, Redux/ Zustand/ Context, Tanstack, Mapbox, Swiper, Onborda, Echarts/ Recharts, Figma, Axios, Async, Hooks, React-hook-form, Zod ), GraphQL, WebSocket, REST API, JWT, Stripe, Figma, Jest, docker, github, Turbopack, MongoDB & PostgreSQL, Redis, Aws & Cloudflare, microservices, serverless (Lambda, Cloudflare Workers), express, Web Socket, Crypto, Stripe Payment Gateway, Github, Collaboration (Github Project, Teams, Zoom, Microsoft Cloud), Ai (gemini, n8n)",
@@ -63,7 +63,7 @@ export const experiences: ExperienceItem[] = [
     period: "Jan 2020 - Mar 2025",
     company: "PT Kode Kreatif Digital, Sidoarjo",
     timing: "Full Time, Hybrid",
-    role: "Senior Fullstack Software Engineer",
+    role: "Fullstack Software Engineer",
     description: [
       "Develop web apps and hybrid mobile apps (profile, online store, education, health, finance, custom)",
       "Technologies: TypeScript, Material UI, Tailwind, Ant Design, ReactJS, Redux, NextJS, ExpressJS, Laravel, React Native, MySQL, PostgreSQL, ORM, GitHub, GraphQL, REST API, Web Socket, Golang, Python, Docker, Kubernetes",
@@ -373,7 +373,7 @@ export const education: Education[] = [
       "Graduated with honors with a GPA of 3.66. Multiple tech community activities, participated in student organizations, and completed a thesis project developing a crime reporting application (Crimenesia) in collaboration with local police and the community.",
   },
   {
-    degree: "Senior High School",
+    degree: "High School",
     field: "Natural Sciences Major",
     institution: "SMAN 1 Gedangan, Sidoarjo",
     period: "2009 - 2012",

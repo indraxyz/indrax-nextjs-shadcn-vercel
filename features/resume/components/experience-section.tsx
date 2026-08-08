@@ -7,22 +7,24 @@ import { Briefcase } from "lucide-react"
 
 function ExperienceDetails({ company, period, timing, role, description }: (typeof experiences)[number]) {
   return (
-    <div className="space-y-3">
-      <div className="flex flex-wrap items-center gap-3">
-        <p className="border border-border bg-muted px-2 py-1 text-xs font-bold uppercase tracking-widest text-foreground">
+    <div className="space-y-2">
+      <div className="flex flex-wrap items-center gap-2">
+        <p className="variant-secondary variant-soft-chip rounded-none border-2 px-2 py-1 text-xs font-black uppercase tracking-[0.12em] text-foreground">
           {period}
         </p>
-        <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-          ({timing})
-        </span>
+      </div>
+      <div className="flex flex-wrap items-center gap-2">
         <Badge
-          variant="outline"
-          className="rounded-none border-foreground px-2 text-xs uppercase tracking-wider"
+          variant="secondary"
+          className="px-2 text-xs"
         >
           {role}
         </Badge>
+        <span className="text-xs font-black uppercase tracking-widest text-foreground">
+          ({timing})
+        </span>
       </div>
-      <h3 className="text-xl font-extrabold uppercase tracking-tight">{company}</h3>
+      <h3 className="text-xl font-black uppercase leading-tight tracking-tight">{company}</h3>
       <ul className="ml-4 list-outside list-disc space-y-2 text-sm text-foreground">
         {description.map((item) => (
           <li key={item} className="leading-relaxed font-medium">
@@ -36,9 +38,13 @@ function ExperienceDetails({ company, period, timing, role, description }: (type
 
 export function ExperienceSection() {
   return (
-    <Card className="border-2 border-border bg-card">
-      <CardHeader className="border-b-2 border-border bg-muted">
-        <SectionHeader icon={<Briefcase className="h-5 w-5" />} title="Professional Experience" />
+    <Card className="variant-primary variant-surface bg-[var(--variant-soft)]">
+      <CardHeader className="variant-surface-header border-b-2">
+        <SectionHeader
+          icon={<Briefcase className="h-5 w-5" />}
+          title="Professional Experience"
+          variant="primary"
+        />
       </CardHeader>
       <CardContent className="pt-8">
         <div className="hidden max-h-[1250px] overflow-y-auto pr-4 xl:block">
@@ -60,24 +66,26 @@ export function ExperienceSection() {
           {experiences.map((experience) => (
             <Card
               key={`${experience.company}-${experience.period}`}
-              className="max-w-96 shrink-0 border-2 border-border border-t-[6px] border-t-primary bg-card"
+              className="variant-secondary variant-border max-w-96 shrink-0 bg-[var(--variant-soft)]"
             >
-              <CardHeader className="border-b-2 border-border bg-muted pb-4">
-                <div className="mb-3 flex flex-wrap items-center gap-2">
-                  <p className="border border-border bg-muted px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground">
+              <CardHeader className="variant-surface-header border-b-2 pb-4">
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <p className="variant-soft-chip rounded-none border-2 px-2 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-foreground">
                     {experience.period}
                   </p>
-                  <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+                </div>
+                <div className="mt-2 flex flex-wrap items-center gap-1.5">
+                  <Badge
+                    variant="tertiary"
+                    className="w-fit px-2 text-[10px]"
+                  >
+                    {experience.role}
+                  </Badge>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-current">
                     ({experience.timing})
                   </span>
                 </div>
-                <Badge
-                  variant="outline"
-                  className="mb-2 w-fit rounded-none border-foreground px-2 text-[10px] uppercase tracking-wider"
-                >
-                  {experience.role}
-                </Badge>
-                <CardTitle className="text-lg font-extrabold uppercase tracking-tight">
+                <CardTitle className="mt-2 text-lg font-black uppercase leading-tight tracking-tight">
                   {experience.company}
                 </CardTitle>
               </CardHeader>
