@@ -30,8 +30,10 @@ export const personalInfo: PersonalInfo = {
     "Authentication & Authorization",
     "Automation & Agentic AI",
     "Thirdparty Integration",
-    "Testing & Debugging",
-    "Design System & Animation",
+    "UI/UX Design System & Animation",
+    "Digital Marketing",
+    "QA, Testing & Debugging",
+    "Project Management & Collaboration",
   ],
 }
 
@@ -46,7 +48,8 @@ export const experiences: ExperienceItem[] = [
     timing: "Full Time, Hybrid",
     role: "Software Engineer",
     description: [
-      "Joined Juicebox Indonesia as a Software Engineer after being connected to the opportunity through LinkedIn.",
+      "Fullstack Software Engineer working with a fully agentic AI workflow while maintaining a strong focus on code quality, conventions, and best practices. Experienced in delivering features quickly and resolving issues with clear, maintainable solutions.",
+      "Tech stack includes frameworks such as Laravel, Statamic, Next.js, and WordPress; databases such as MySQL, MariaDB, and PostgreSQL; containerized environments with Docker, Redis, and cloud storage; CI/CD deployment across AWS and VPS instances; AI API integration and automation; and agentic workflows with Claude, Codex, terminal-based review/test setups, MCP, and custom skills.",
     ],
   },
   {
@@ -196,160 +199,170 @@ export const techSkills = [
 
 export const techStacks: TechStack[] = [
   {
-    group: "Core Development",
+    group: "Fullstack Development",
     category: "Languages",
     items: "TypeScript, Go, JavaScript, Python, PHP, SQL, NoSQL",
   },
   {
-    group: "Core Development",
+    group: "System & Software Architecture",
     category: "Software Architecture",
     items:
       "Microservice, Monolith, Service Oriented, Event-driven, Serverless, Microkernel, Monorepo",
   },
   {
-    group: "Core Development",
+    group: "System & Software Architecture",
     category: "Methodologies",
     items: "Agile, Scrum, Sprint",
   },
   {
-    group: "Infrastructure & DevOps",
+    group: "Deployment & CI/CD",
     category: "Cloud Platforms",
     items: "Vercel, AWS, Cloudflare",
   },
   {
-    group: "Infrastructure & DevOps",
+    group: "Deployment & CI/CD",
     category: "Containers & Serverless",
     items: "Docker, AWS Lambda, Cloudflare Workers, Vercel Function",
   },
   {
-    group: "Backend & Database",
+    group: "Fullstack Development",
     category: "Backend Frameworks",
     items: "Hono.js, GoFiber, Laravel, Express, Gin",
   },
   {
-    group: "Backend & Database",
+    group: "SQL & NoSQL Databases",
     category: "Databases",
     items: "PostgreSQL, MySQL, MongoDB, Supabase, Firebase, Neon",
   },
   {
-    group: "Backend & Database",
+    group: "SQL & NoSQL Databases",
     category: "ORM & Storage",
     items: "Prisma, Drizzle, Redis, Serverless Storage",
   },
   {
-    group: "Backend & Database",
+    group: "Authentication & Authorization",
     category: "Security & Auth",
     items: "JWT, Auth.js, Better-auth, Crypto",
   },
   {
-    group: "API & Networking",
+    group: "System & Software Architecture",
     category: "Protocols",
     items: "RESTful, GraphQL, RPC, JSON-RPC",
   },
   {
-    group: "API & Networking",
+    group: "System & Software Architecture",
     category: "Realtime",
     items: "WebSocket",
   },
   {
-    group: "Frontend Development",
+    group: "Fullstack Development",
     category: "Frameworks",
     items: "Next.js, Remix React-Router, Preact, Statamic",
   },
   {
-    group: "Frontend Development",
+    group: "UI/UX Design System & Animation",
     category: "UI Components",
     items: "Shadcn, Radix, HeroUI, FluentUI, MantineUI, Chakra, Gluestack, Tamagui, Lit",
   },
   {
-    group: "Frontend Development",
+    group: "UI/UX Design System & Animation",
     category: "Styling",
     items: "Emotion, Tailwind, UnoCSS, Kuma UI, Styled JSX",
   },
   {
-    group: "Frontend Development",
+    group: "Fullstack Development",
     category: "State Management",
     items: "Redux, Zustand, Context",
   },
   {
-    group: "Frontend Development",
+    group: "Fullstack Development",
     category: "Data Fetching",
     items: "TanStack Query, Axios, Fetch",
   },
   {
-    group: "Frontend Development",
+    group: "Deployment & CI/CD",
     category: "Build Tools",
     items: "Webpack, Turbopack, Vite, Turborepo",
   },
   {
-    group: "Frontend Development",
+    group: "UI/UX Design System & Animation",
     category: "Animation",
     items: "GSAP, Framer Motion, Remotion",
   },
   {
-    group: "Frontend Development",
+    group: "UI/UX Design System & Animation",
     category: "Data Visualization",
     items: "Echarts, Recharts, Nivo, TanStack Table",
   },
   {
-    group: "Frontend Development",
+    group: "Fullstack Development",
     category: "Forms & Utilities",
     items:
       "React-hook-form, Zod, Lodash, RxJS, Hooks, Async, Loadable-components, Algolia, Alpine, Mapbox, Urql",
   },
   {
-    group: "Frontend Development",
+    group: "UI/UX Design System & Animation",
     category: "Specialized Components",
     items: "Tiptap, Plate, Quill, Swiper, Embla-carousel, Onborda, React Flow",
   },
   {
-    group: "Mobile Development",
+    group: "Fullstack Development",
     category: "React Native",
     items:
       "Tamagui, Expo, Flash List, Firebase, React Navigation, Mapbox, Notifications, Hardware Module",
   },
   {
-    group: "AI & Automation",
+    group: "Automation & Agentic AI",
     category: "LLMs",
     items: "GPT, Claude, Gemini, Llama, N8n",
   },
   {
-    group: "AI & Automation",
+    group: "Automation & Agentic AI",
     category: "Agentic Workflows",
     items: "Agentic AI, Vs Code/Cursor, Rules, Skills, MCP, Agents, Models, PRDs & Plans, Prompting.",
   },
   {
-    group: "Quality Assurance",
+    group: "QA, Testing & Debugging",
     category: "Testing",
     items: "Jest, Vitest, Testify, Unit, Integration, JSON-server (data mocking)",
   },
   {
-    group: "Collaboration",
+    group: "QA, Testing & Debugging",
+    category: "Debugging & Performance",
+    items: "Browser DevTools, React Profiler, logs tracing, bottleneck analysis, performance tuning",
+  },
+  {
+    group: "Project Management & Collaboration",
     category: "Development Tools",
     items: "Git, GitHub, VSCode, Swagger, Storybook",
   },
   {
-    group: "Collaboration",
+    group: "Project Management & Collaboration",
     category: "Project Management",
     items: "Jira, Planner Microsoft, GitHub Project, Notion",
   },
   {
-    group: "Collaboration",
+    group: "Project Management & Collaboration",
     category: "Communication",
     items: "Teams, Google Meet, Zoom, Microsoft Cloud, Google Workspace",
   },
   {
-    group: "Collaboration",
+    group: "UI/UX Design System & Animation",
     category: "Design & Media",
     items: "Figma, Adobe XD, Eraser, Photoshop, Coreldraw, Illustrator, Lightroom",
   },
   {
-    group: "Integrations",
+    group: "Thirdparty Integration",
     category: "Payment Gateways",
     items: "Midtrans, Stripe, Polar",
   },
   {
-    group: "Integrations",
+    group: "Digital Marketing",
+    category: "Growth & Analytics",
+    items: "SEO, Google Analytics, Search Console, Meta Pixel, campaign tracking, landing page optimization",
+  },
+  {
+    group: "Deployment & CI/CD",
     category: "Operating Systems",
     items: "Windows, Linux, MacOS",
   },

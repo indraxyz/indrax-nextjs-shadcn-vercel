@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SectionHeader } from "@/features/resume/components/section-header"
-import { techStacks } from "@/features/resume/data/resume"
+import { personalInfo, techStacks } from "@/features/resume/data/resume"
 import { Code } from "lucide-react"
 
 const groupedStacks = techStacks.reduce(
@@ -15,6 +15,15 @@ const groupedStacks = techStacks.reduce(
   {} as Record<string, typeof techStacks>
 )
 
+function getGroupOrder(groupName: string) {
+  const index = personalInfo.highlightSkills?.indexOf(groupName) ?? -1
+  return index >= 0 ? index : Number.MAX_SAFE_INTEGER
+}
+
+const orderedGroupedStacks = Object.entries(groupedStacks).sort(
+  ([groupA], [groupB]) => getGroupOrder(groupA) - getGroupOrder(groupB)
+)
+
 export function TechStackSection() {
   return (
     <Card className="variant-primary variant-surface bg-[var(--variant-soft)]">
@@ -22,7 +31,7 @@ export function TechStackSection() {
         <SectionHeader icon={<Code className="h-5 w-5" />} title="Tech Stack" variant="primary" />
       </CardHeader>
       <CardContent className="flex gap-6 overflow-x-auto pb-6 pt-6">
-        {Object.entries(groupedStacks).map(([groupName, stacks]) => (
+        {orderedGroupedStacks.map(([groupName, stacks]) => (
           <Card
             key={groupName}
             className="variant-secondary variant-border flex w-[350px] max-w-[85vw] shrink-0 flex-col bg-[var(--variant-soft)]"
