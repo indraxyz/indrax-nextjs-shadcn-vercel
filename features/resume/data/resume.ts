@@ -49,7 +49,7 @@ export const experiences: ExperienceItem[] = [
     role: "Software Engineer",
     description: [
       "Fullstack Software Engineer working with a fully agentic AI workflow while maintaining a strong focus on code quality, conventions, and best practices. Experienced in delivering features quickly and resolving issues with clear, maintainable solutions.",
-      "Tech stack includes frameworks such as Laravel, Statamic, Next.js, and WordPress; databases such as MySQL, MariaDB, and PostgreSQL; containerized environments with Docker, Redis, and cloud storage; CI/CD deployment across AWS and VPS instances; AI API integration and automation; and agentic workflows with Claude, Codex, terminal-based review/test setups, MCP, and custom skills.",
+      "Tech stack includes frameworks such as Laravel, Statamic, Next.js, and WordPress; databases such as MySQL, MariaDB, and PostgreSQL; containerized environments with Docker, Redis, and cloud storage; CI/CD deployment across AWS and VPS instances; AI API integration and automation; collaboration with Jira, Slack, WhatsApp, Trello, and GitHub; payment gateways including Stripe and Xendit; unit, feature, and automated testing; UI/UX and animation workflows with Figma, pen.dev, GSAP, and Lenis; and agentic workflows with Claude, Codex, Agentic terminal setup, MCP, and custom skills.",
     ],
   },
   {
