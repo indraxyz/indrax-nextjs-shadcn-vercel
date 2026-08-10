@@ -11,9 +11,10 @@ export function PortfolioSection() {
       <CardHeader className="variant-surface-header border-b-2">
         <SectionHeader
           icon={<Code className="h-5 w-5" />}
-          title="Portfolio & Projects"
+          title="Portfolio"
+          subtitle="Selected projects that show practical delivery across web, mobile, and integrated product systems."
           variant="primary"
-          link={{ href: SOCIAL_LINKS.github, textLink: "View My Github" }}
+          link={{ href: SOCIAL_LINKS.github, textLink: "Github" }}
         />
       </CardHeader>
       <CardContent className="flex gap-6 overflow-x-auto pb-6 pt-6">

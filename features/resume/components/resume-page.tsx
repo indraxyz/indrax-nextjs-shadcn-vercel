@@ -29,8 +29,8 @@ export function ResumePage() {
 
         <div className="space-y-8">
           <ExperienceSection />
-          <PortfolioSection />
           <TechStackSection />
+          <PortfolioSection />
         </div>
 
         <div className="mt-12 border-t-2 border-border py-10 text-center">

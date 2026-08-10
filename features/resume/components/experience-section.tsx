@@ -5,7 +5,13 @@ import { experiences } from "@/features/resume/data/resume"
 import { SectionHeader } from "@/features/resume/components/section-header"
 import { Briefcase } from "lucide-react"
 
-function ExperienceDetails({ company, period, timing, role, description }: (typeof experiences)[number]) {
+function ExperienceDetails({
+  company,
+  period,
+  timing,
+  role,
+  description,
+}: (typeof experiences)[number]) {
   return (
     <div className="space-y-2">
       <div className="flex flex-wrap items-center gap-2">
@@ -14,10 +20,7 @@ function ExperienceDetails({ company, period, timing, role, description }: (type
         </p>
       </div>
       <div className="flex flex-wrap items-center gap-2">
-        <Badge
-          variant="secondary"
-          className="px-2 text-xs"
-        >
+        <Badge variant="secondary" className="px-2 text-xs">
           {role}
         </Badge>
         <span className="text-xs font-black uppercase tracking-widest text-foreground">
@@ -42,7 +45,8 @@ export function ExperienceSection() {
       <CardHeader className="variant-surface-header border-b-2">
         <SectionHeader
           icon={<Briefcase className="h-5 w-5" />}
-          title="Professional Experience"
+          title="Experiences"
+          subtitle="Professional timeline across product engineering, fullstack delivery, and agentic workflow execution."
           variant="primary"
         />
       </CardHeader>
@@ -75,10 +79,7 @@ export function ExperienceSection() {
                   </p>
                 </div>
                 <div className="mt-2 flex flex-wrap items-center gap-1.5">
-                  <Badge
-                    variant="tertiary"
-                    className="w-fit px-2 text-[10px]"
-                  >
+                  <Badge variant="tertiary" className="w-fit px-2 text-[10px]">
                     {experience.role}
                   </Badge>
                   <span className="text-[10px] font-black uppercase tracking-widest text-current">

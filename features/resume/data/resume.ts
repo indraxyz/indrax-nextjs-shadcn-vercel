@@ -31,13 +31,13 @@ export const personalInfo: PersonalInfo = {
     "Automation & Agentic AI",
     "Thirdparty Integration",
     "UI/UX Design System & Animation",
-    "Digital Marketing",
     "QA, Testing & Debugging",
     "Project Management & Collaboration",
+    "Digital Marketing",
   ],
 }
 
-export const bio = `A 9+ years Software Engineer with extensive expertise in building scalable & maintainable applications.
+export const bio = `9+ years Software Engineer with extensive expertise in building scalable & maintainable applications.
 Specialize in modern technologies, delivering high-quality solutions that solve complex business challenges.
 With a proven track record in full-stack development, system architecture, and project management, I bring a comprehensive approach to software engineering that combines technical excellence with strategic thinking.`
 
@@ -53,8 +53,8 @@ export const experiences: ExperienceItem[] = [
     ],
   },
   {
-    period: "Apr 2025 - Present",
-    company: "Primuse, Bali",
+    period: "Apr 2025 - Apr 2026",
+    company: "Primuse, Canggu, Bali",
     timing: "Full Time, Hybrid",
     role: "Software Engineer",
     description: [
@@ -66,7 +66,7 @@ export const experiences: ExperienceItem[] = [
     period: "Jan 2020 - Mar 2025",
     company: "PT Kode Kreatif Digital, Sidoarjo",
     timing: "Full Time, Hybrid",
-    role: "Fullstack Software Engineer",
+    role: "Fullstack",
     description: [
       "Develop web apps and hybrid mobile apps (profile, online store, education, health, finance, custom)",
       "Technologies: TypeScript, Material UI, Tailwind, Ant Design, ReactJS, Redux, NextJS, ExpressJS, Laravel, React Native, MySQL, PostgreSQL, ORM, GitHub, GraphQL, REST API, Web Socket, Golang, Python, Docker, Kubernetes",
@@ -86,7 +86,7 @@ export const experiences: ExperienceItem[] = [
     period: "May 2018 - May 2019",
     company: "Yayasan iik Bhakti Wiyata (partner with PT Sigma Intan Mahakarya), Surabaya",
     timing: "Full Time, Hybrid",
-    role: "Fullstack Software Engineer",
+    role: "Fullstack",
     description: [
       "Built Ners App, school app, canteen app from scratch",
       "Technologies: JavaScript, TypeScript, Material UI, Tailwind, ReactJS, Redux, NextJS, ExpressJS, Laravel, React Native, MySQL, PostgreSQL, GitHub, GraphQL, REST API, Web Socket",
@@ -96,7 +96,7 @@ export const experiences: ExperienceItem[] = [
     period: "Jun 2016 - Apr 2018",
     company: "CV. Indscript Computer, Sidoarjo",
     timing: "Full Time, Onsite",
-    role: "Fullstack Software Engineer",
+    role: "Fullstack",
     description: [
       "Developed web/android applications based on client requirements such as Company profiles, online stores, parking systems, waiting systems, POS, custom solutions",
       "Technologies: Laravel, ExpressJS, ReactJS, Material UI, React Native, MySQL, ORM, GitHub, REST API",
@@ -106,7 +106,7 @@ export const experiences: ExperienceItem[] = [
     period: "Mar 2016 - May 2016",
     company: "CV. Mitra Mia Group, Surabaya",
     timing: "Freelance, Hybrid",
-    role: "Fullstack Web Developer, Team Lead (7 members)",
+    role: "Full-stack, Team Lead (7 members)",
     description: [
       "Built online shop web for property listings",
       "Technologies: Laravel, jQuery, Bootstrap, MySQL, JSON, GitHub, REST API, VPS Server",
@@ -175,12 +175,6 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Crime reporting system between police and society. Main features: crime reporting and crime mapping. Web and android platform using Laravel, MySQL, jQuery, Semantic, NotyJS, ReactJS, React Native",
     year: "2017",
-  },
-  {
-    title: "Github Portfolio",
-    description: "My portfolio place and explore code on software development",
-    year: "Ongoing",
-    link: "https://github.com/indraxyz",
   },
 ]
 
@@ -319,7 +313,8 @@ export const techStacks: TechStack[] = [
   {
     group: "Automation & Agentic AI",
     category: "Agentic Workflows",
-    items: "Agentic AI, Vs Code/Cursor, Rules, Skills, MCP, Agents, Models, PRDs & Plans, Prompting.",
+    items:
+      "Agentic AI, Vs Code/Cursor, Rules, Skills, MCP, Agents, Models, PRDs & Plans, Prompting.",
   },
   {
     group: "QA, Testing & Debugging",
@@ -329,7 +324,8 @@ export const techStacks: TechStack[] = [
   {
     group: "QA, Testing & Debugging",
     category: "Debugging & Performance",
-    items: "Browser DevTools, React Profiler, logs tracing, bottleneck analysis, performance tuning",
+    items:
+      "Browser DevTools, React Profiler, logs tracing, bottleneck analysis, performance tuning",
   },
   {
     group: "Project Management & Collaboration",
@@ -359,7 +355,8 @@ export const techStacks: TechStack[] = [
   {
     group: "Digital Marketing",
     category: "Growth & Analytics",
-    items: "SEO, Google Analytics, Search Console, Meta Pixel, campaign tracking, landing page optimization",
+    items:
+      "SEO, Google Analytics, Search Console, Meta Pixel, campaign tracking, landing page optimization",
   },
   {
     group: "Deployment & CI/CD",

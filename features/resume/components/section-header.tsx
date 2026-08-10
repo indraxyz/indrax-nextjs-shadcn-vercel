@@ -6,6 +6,7 @@ import type { ReactNode } from "react"
 interface SectionHeaderProps {
   icon: ReactNode
   title: string
+  subtitle?: string
   variant?: VisualVariant
   link?: {
     href: string
@@ -13,16 +14,27 @@ interface SectionHeaderProps {
   }
 }
 
-export function SectionHeader({ icon, title, variant = "primary", link }: SectionHeaderProps) {
+export function SectionHeader({
+  icon,
+  title,
+  subtitle,
+  variant = "primary",
+  link,
+}: SectionHeaderProps) {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-start gap-3">
       <div
         className={`variant-icon flex h-10 w-10 shrink-0 items-center justify-center rounded-none border-2 ${variantClassNames[variant]}`}
       >
         {icon}
       </div>
-      <div className="flex flex-col">
+      <div className="flex min-w-0 flex-col gap-1">
         <h2 className="text-2xl font-black uppercase tracking-tight">{title}</h2>
+        {subtitle && (
+          <p className="max-w-3xl text-sm font-semibold leading-relaxed text-current opacity-85">
+            {subtitle}
+          </p>
+        )}
         {link && (
           <Link
             href={link.href}
