@@ -28,7 +28,12 @@ export function TechStackSection() {
   return (
     <Card className="variant-primary variant-surface bg-[var(--variant-soft)]">
       <CardHeader className="variant-surface-header border-b-2">
-        <SectionHeader icon={<Code className="h-5 w-5" />} title="Tech Stack" variant="primary" />
+        <SectionHeader
+          icon={<Code className="h-5 w-5" />}
+          title="Tech Stack"
+          subtitle="Grouped capabilities across delivery, architecture, automation, quality, and collaboration."
+          variant="primary"
+        />
       </CardHeader>
       <CardContent className="flex gap-6 overflow-x-auto pb-6 pt-6">
         {orderedGroupedStacks.map(([groupName, stacks]) => (
